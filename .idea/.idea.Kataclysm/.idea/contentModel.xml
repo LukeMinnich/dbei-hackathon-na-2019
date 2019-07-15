@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\_play\dbei-hackathon-na-2019" t="IncludeFlat">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Kataclysm.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="src\Common" t="IncludeRecursive">
+        <e p="AnalyticalElement.cs" t="Include" />
+        <e p="AreaLoad.cs" t="Include" />
+        <e p="BuildingLevel.cs" t="Include" />
+        <e p="Common.csproj" t="IncludeRecursive" />
+        <e p="DistributedLoad3D.cs" t="Include" />
+        <e p="Enumeration.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="DoubleExtensions.cs" t="Include" />
+          <e p="LineSegmentExtensions.cs" t="Include" />
+          <e p="Point2DExtensions.cs" t="Include" />
+          <e p="Point3DExtensions.cs" t="Include" />
+          <e p="Polygon2DExtensions.cs" t="Include" />
+          <e p="Rounding.cs" t="Include" />
+          <e p="StringExtensions.cs" t="Include" />
+        </e>
+        <e p="FactoredLoadPattern.cs" t="Include" />
+        <e p="FloorLoad.cs" t="Include" />
+        <e p="Geometry" t="Include">
+          <e p="IEnumerableExtensions.cs" t="Include" />
+          <e p="Polygon2DExtensions.cs" t="Include" />
+          <e p="Polygon3D.cs" t="Include" />
+          <e p="SimplePolygon2D.cs" t="Include" />
+          <e p="SimplePolygonException.cs" t="Include" />
+        </e>
+        <e p="IInternalLoad.cs" t="Include" />
+        <e p="InternalDistributedLoad3D.cs" t="Include" />
+        <e p="InternalPointLoad3D.cs" t="Include" />
+        <e p="IReportsElementId.cs" t="Include" />
+        <e p="IReportsLevel.cs" t="Include" />
+        <e p="IReportsLoadPattern.cs" t="Include" />
+        <e p="LateralDirection.cs" t="Include" />
+        <e p="LateralLevelForce.cs" t="Include" />
+        <e p="LevelDataDictionary.cs" t="Include" />
+        <e p="LevelDictionary.cs" t="Include" />
+        <e p="LineLoad.cs" t="Include" />
+        <e p="Load3D.cs" t="Include" />
+        <e p="LoadCase.cs" t="Include" />
+        <e p="LoadPattern.cs" t="Include" />
+        <e p="LoadPatternType.cs" t="Include" />
+        <e p="LoadPatternTypeConverter.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Common.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PointLoad3D.cs" t="Include" />
+        <e p="PredominantDirection.cs" t="Include" />
+        <e p="Projection.cs" t="Include" />
+        <e p="ProjectSettings.cs" t="Include" />
+        <e p="ResponseCollection.cs" t="Include" />
+        <e p="Side.cs" t="Include" />
+        <e p="SuperimposableResponse.cs" t="Include" />
+        <e p="UniformLineLoad.cs" t="Include" />
+        <e p="Units" t="Include">
+          <e p="AreaUnit.cs" t="Include" />
+          <e p="Conversion" t="Include">
+            <e p="Area.cs" t="Include" />
+            <e p="Constants.cs" t="Include" />
+            <e p="Density.cs" t="Include" />
+            <e p="FlexuralStiffness.cs" t="Include" />
+            <e p="FLT.cs" t="Include" />
+            <e p="Force.cs" t="Include" />
+            <e p="ForcePerLength.cs" t="Include" />
+            <e p="Length.cs" t="Include" />
+            <e p="LengthCubed.cs" t="Include" />
+            <e p="LengthToThe4th.cs" t="Include" />
+            <e p="LengthToThe6th.cs" t="Include" />
+            <e p="Moment.cs" t="Include" />
+            <e p="Result.cs" t="Include" />
+            <e p="Stress.cs" t="Include" />
+            <e p="Time.cs" t="Include" />
+            <e p="Undefined.cs" t="Include" />
+            <e p="Unitless.cs" t="Include" />
+            <e p="UnitType.cs" t="Include" />
+            <e p="Utilities.cs" t="Include" />
+          </e>
+          <e p="DensityUnit.cs" t="Include" />
+          <e p="FlexuralStiffnessUnit.cs" t="Include" />
+          <e p="ForcePerLengthUnit.cs" t="Include" />
+          <e p="ForceUnit.cs" t="Include" />
+          <e p="LengthCubedUnit.cs" t="Include" />
+          <e p="LengthToThe4thUnit.cs" t="Include" />
+          <e p="LengthToThe6thUnit.cs" t="Include" />
+          <e p="LengthUnit.cs" t="Include" />
+          <e p="MomentPerLengthUnit.cs" t="Include" />
+          <e p="MomentUnit.cs" t="Include" />
+          <e p="Parsing" t="Include">
+            <e p="Parse.cs" t="Include" />
+          </e>
+          <e p="StressUnit.cs" t="Include" />
+          <e p="TimeUnit.cs" t="Include" />
+          <e p="UndefinedUnit.cs" t="Include" />
+          <e p="Unit.cs" t="Include" />
+          <e p="UnitlessUnit.cs" t="Include" />
+          <e p="UnitSystem.cs" t="Include" />
+        </e>
+      </e>
+      <e p="src\Randomizer" t="IncludeRecursive">
+        <e p="Class1.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Randomizer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Randomizer.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="src\StructuralAnalysis" t="IncludeRecursive">
+        <e p="AnalysisManager.cs" t="Include" />
+        <e p="Model" t="Include">
+          <e p="BearingWall.cs" t="Include" />
+          <e p="IReportsManyLevels.cs" t="Include" />
+          <e p="ModelSettings.cs" t="Include" />
+          <e p="OneWayDeck.cs" t="Include" />
+          <e p="Point3DList.cs" t="Include" />
+          <e p="PointLoad.cs" t="Include" />
+          <e p="SeismicParameters.cs" t="Include" />
+          <e p="SerializedModel.cs" t="Include" />
+          <e p="SiteParameters.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="StructuralAnalysis.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Rigid" t="Include">
+          <e p="AnalyticalWall.cs" t="Include" />
+          <e p="AnalyticalWallLateral.cs" t="Include" />
+          <e p="BuildingLevelLateral2.cs" t="Include" />
+          <e p="EquivalentLateralForceProcedure.cs" t="Include" />
+          <e p="GeneralLightFramedShearWall.cs" t="Include" />
+          <e p="GeneralWoodShearWall.cs" t="Include" />
+          <e p="LevelStiffnessParameters.cs" t="Include" />
+          <e p="MassCenter.cs" t="Include" />
+          <e p="NodalDisplacement.cs" t="Include" />
+          <e p="NodalForce.cs" t="Include" />
+          <e p="NodalResponse.cs" t="Include" />
+          <e p="NodalResponseCollection.cs" t="Include" />
+          <e p="NodalStress.cs" t="Include" />
+          <e p="PointDrift.cs" t="Include" />
+          <e p="RigidAnalysis.cs" t="Include" />
+          <e p="RigidResponses.cs" t="Include" />
+          <e p="ShearWallPanelResponse.cs" t="Include" />
+          <e p="ShearWallPanelResponseCollection.cs" t="Include" />
+          <e p="ShearWallPanelRigidAnalysisParameters.cs" t="Include" />
+        </e>
+        <e p="StructuralAnalysis.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+    <e p="C:\Users\luke.minnich\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\luke.minnich\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Kataclysm.147618760.00" t="ExcludeRecursive" />
+  </component>
+</project>

@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\_play\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\StructuralAnalysis.csproj",
+    "projectName": "Kataclysm.StructuralAnalysis",
+    "projectPath": "C:\\_play\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\StructuralAnalysis.csproj",
+    "outputPath": "C:\\_play\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netstandard2.0"
+    ],
+    "frameworks": {
+      "netstandard2.0": {
+        "projectReferences": {
+          "C:\\_play\\dbei-hackathon-na-2019\\src\\Common\\Common.csproj": {
+            "projectPath": "C:\\_play\\dbei-hackathon-na-2019\\src\\Common\\Common.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netstandard2.0": {
+      "dependencies": {
+        "MathNet.Numerics": {
+          "target": "Package",
+          "version": "[4.8.1, )"
+        },
+        "MathNet.Spatial": {
+          "target": "Package",
+          "version": "[0.5.0, )"
+        },
+        "NETStandard.Library": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.0.3, )",
+          "autoReferenced": true
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[12.0.2, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
