@@ -10,4 +10,8 @@
     <ProjectReference Include="..\StructuralAnalysis\StructuralAnalysis.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.111" />
+  </ItemGroup>
+
 </Project>

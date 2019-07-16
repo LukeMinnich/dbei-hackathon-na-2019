@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using Kataclysm.Common.Extensions;
 using MathNet.Spatial.Euclidean;
 using Newtonsoft.Json;
 using NUnit.Framework;
@@ -8,7 +6,7 @@ using NUnit.Framework;
 namespace Kataclysm.StructuralAnalysis.Tests
 {
     [TestFixture]
-    public class WallCostCharacterizationTest
+    public class OutputGeometryTest
     {
         [Test]
         public void GenerateGeometryForOutputJson()
