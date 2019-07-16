@@ -1,30 +1,44 @@
-﻿using Kataclysm.Randomizer;
+﻿using System.IO;
+using System.Reflection;
+using Kataclysm.Randomizer;
 using Kataclysm.StructuralAnalysis;
 using Kataclysm.StructuralAnalysis.Model;
+using System.Data.SQLite;
+using Kataclysm.Common;
 
 namespace Kaboom
 {
     class Program
     {
+        private static SQLiteConnection _dbConn;
+        
         static void Main(string[] args)
         {
-            // Randomize
-            RandomizedBuilding randomized = Randomize.Random();
+            _dbConn = DB.CreateConnection();
             
-            // Generate Serialized Model from randomization
-            //   Includes wall layouts, boundary info, and mass
-            // TODO Anthonie to link up
-            var serializedModel = new SerializedModel();
+            for (int i = 0; i < 100; i++)
+            {
+                // Randomize
+                RandomizedBuilding randomized = Randomize.Random();
             
-            // Feed it through the rigid analysis
-            var manager = new AnalysisManager(serializedModel);
-            manager.Run();
-
-            // Determine wall costs
+                // Generate Serialized Model from randomization
+                //   Includes wall layouts, boundary info, and mass
+                // TODO Anthonie to link up
+                var serializedModel = new SerializedModel();
             
+                // Feed it through the rigid analysis
+                var manager = new AnalysisManager(serializedModel);
+                WallCostCharacterization wallCostCharacterization = manager.Run();
             
-            // Output to SQL Lite db
+                // Write to csv
+                string executingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string fpath = Path.Combine(executingPath, @"DataOutput\testData.csv");
+                
+                wallCostCharacterization.WriteToCSV(fpath);
             
+                // Output to SQL Lite db
+                wallCostCharacterization.WriteToDB(_dbConn);
+            }
         }
     }
 }

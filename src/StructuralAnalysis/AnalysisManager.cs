@@ -6,6 +6,7 @@ using Kataclysm.Common;
 using Kataclysm.Common.Extensions;
 using Kataclysm.Common.Geometry;
 using Kataclysm.Common.Units.Conversion;
+using Kataclysm.StructuralAnalysis.Evaluation;
 using Kataclysm.StructuralAnalysis.Model;
 using Kataclysm.StructuralAnalysis.Rigid;
 using Katerra.Apollo.Structures.Common.Units;
@@ -70,16 +71,52 @@ namespace Kataclysm.StructuralAnalysis
 
         private WallCostCharacterization CharacterizeAllWallCosts()
         {
-            
+            double totalStructuralShearWallCost = 0;
+
+            bool allWallsMeetShearLimit = true;
             
             foreach (BuildingLevelLateral2 level in _lateralLevels)
             {
-                var analysis = RigidAnalyses[level.Level];
-                
-                
+                RigidAnalysis analysis = RigidAnalyses[level.Level];
+
+                foreach (AnalyticalWallLateral wall in analysis.Walls)
+                {
+                    Force maxShear = analysis.Responses.WallLoadCaseResults[wall.UniqueId]
+                        .EnvelopeResponsesAbsolute(_loadCases).TotalShear;
+                    
+                    Length wallLength = new Length(wall.WallLine.Length, LengthUnit.Inch);
+                    
+                    var shearUtilization = new WallShearUtilization((ForcePerLength) (maxShear / wallLength));
+
+                    totalStructuralShearWallCost += shearUtilization.GetNormalizedCost();
+
+                    if (allWallsMeetShearLimit && shearUtilization.ExceedsLimit) allWallsMeetShearLimit = false;
+                }
             }
             
-            throw new NotImplementedException();
+            // geometry at lowest level
+            var lowestLevel = _lateralLevels.OrderBy(l => l.Level.Elevation).First();
+
+            var geometry = new Geometry {BoundaryVertices = lowestLevel.Boundary.Vertices.ToList()};
+
+            foreach (AnalyticalWallLateral wall in RigidAnalyses[lowestLevel.Level].Walls)
+            {
+                geometry.Wall.Add(new WallGeometry
+                {
+                    EndI = wall.WallLine.StartPoint,
+                    EndJ = wall.WallLine.EndPoint
+                });
+            }
+            
+            return new WallCostCharacterization
+            {
+                RandomizedBuilding = _serializedModel.RandomizedBuilding,
+                TotalStructuralShearWallCost = totalStructuralShearWallCost,
+                GrossSquareFeet = new Area(_lateralLevels.First().Boundary.GetArea(), AreaUnit.SquareInch).ConvertTo(AreaUnit.SquareFoot),
+                Geometry = geometry,
+                MeetsDriftLimit = true,
+                MeetsWallDesignLimit = allWallsMeetShearLimit
+            };
         }
 
         private List<BuildingLevelLateral2> BuildLateralLevels(List<OneWayDeck> decks)

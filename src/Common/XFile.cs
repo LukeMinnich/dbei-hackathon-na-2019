@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace Kataclysm.Common
 {
@@ -50,5 +52,19 @@ namespace Kataclysm.Common
         // Trims off surrounding spaces and double quotes, then replaces "" with "
         //   since Excel likes to add all the extra quotes when generating CSVs
         private static readonly Func<string, string> CleanUpCSVRowItem = s => s.Trim().Trim('\"').Replace("\"\"", "\"");
+
+        public static string CreateCSVString(List<string> objects)
+        {
+            var sB = new StringBuilder();
+            
+            for (int i = 0; i < objects.Count - 1; i++)
+            {
+                sB.Append(objects[i] + ",");
+            }
+
+            sB.Append(objects[objects.Count - 1]);
+
+            return sB.ToString();
+        }
     }
 }
