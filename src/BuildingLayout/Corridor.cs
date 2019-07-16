@@ -23,7 +23,7 @@ namespace BuildingLayout
         public Corridor(Line2D line, double unitDepth, double hallWidth, CorridorLocation location)
         {
             CenterLine = line;
-            UnitDepth = UnitDepth;
+            UnitDepth = unitDepth;
             HallWidth = hallWidth;
             CorridorLocation = location;
 
@@ -43,24 +43,24 @@ namespace BuildingLayout
         {
             var lineLeft = new Line2D();
             var lineRight = new Line2D();
-            var lineVector = new Vector2D();
+            var lineVector = CenterLine.Direction;
             var moveVector = new Vector2D(HallWidth, 0);
 
             switch (CorridorLocation)
             {
                 case CorridorLocation.LeftLeg:
-                    lineVector = CenterLine.Direction / CenterLine.Length;
+                    lineVector = CenterLine.Direction;
                     lineRight = new Line2D((CenterLine.StartPoint + lineVector * UnitDepth + moveVector), CenterLine.EndPoint + moveVector);
                     lineLeft = new Line2D((CenterLine.StartPoint - moveVector), CenterLine.EndPoint - moveVector);
                     break;
                 case CorridorLocation.MiddleLeg:
-                    lineVector = CenterLine.Direction / CenterLine.Length;
+                    lineVector = CenterLine.Direction;
                     lineLeft = new Line2D((CenterLine.StartPoint + lineVector * UnitDepth - moveVector), CenterLine.EndPoint - moveVector);
                     lineRight = new Line2D((CenterLine.StartPoint + lineVector * UnitDepth + moveVector), CenterLine.EndPoint + moveVector);
 
                     break;
                 case CorridorLocation.RightLeg:
-                    lineVector = CenterLine.Direction / CenterLine.Length;
+                    lineVector = CenterLine.Direction;
                     lineLeft = new Line2D((CenterLine.StartPoint + lineVector * UnitDepth - moveVector), CenterLine.EndPoint - moveVector);
                     lineRight = new Line2D((CenterLine.StartPoint + moveVector), CenterLine.EndPoint + moveVector);
                     break;
@@ -69,7 +69,10 @@ namespace BuildingLayout
             }
 
             LineLeft = new List<UnitsLine>() { new UnitsLine(lineLeft) };
-            LineRight = new UnitsLine(lineRight);
+
+            var lineRightSwapped = new Line2D(lineRight.EndPoint, lineRight.StartPoint);
+
+            LineRight = new UnitsLine(lineRightSwapped);
 
         }
 

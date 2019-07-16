@@ -18,7 +18,7 @@ namespace BuildingLayout
             var minWidth = unitList.Select(x => x.Width).Min();
             var failInt = 0;
 
-            while (corridorLengthRemaining > 0)
+            while (corridorLengthRemaining > 0.001)
             {
                 foreach (var unit in unitPriority)
                 {
@@ -57,8 +57,8 @@ namespace BuildingLayout
                     {
                         var unit = unitLine[i];
 
-                        if (currentPercentage[unit.Item1] < desiredUnitMix[unit.Item1])
-                        {
+                        //if (currentPercentage[unit.Item1] < desiredUnitMix[unit.Item1])
+                        //{
                             var availableUnits = unitList.Where(x => x.Type == unit.Item1).ToList();
                             var currentUnit = availableUnits.Single(x => x.Width == unit.Item2);
                             var currentIndex = availableUnits.IndexOf(currentUnit);
@@ -75,9 +75,9 @@ namespace BuildingLayout
                             }
 
                             corridorLengthRemaining -= addedLength;
-                        }
+                        //}
 
-                        if (corridorLengthRemaining == 0)
+                        if (corridorLengthRemaining < 0.001)
                         {
                             break;
                         }
