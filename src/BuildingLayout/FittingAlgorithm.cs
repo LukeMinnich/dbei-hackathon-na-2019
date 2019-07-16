@@ -8,21 +8,7 @@ using System.Text;
 namespace BuildingLayout
 {
     public static class FittingAlgorithm
-    {
-        public static void CreateSerializedModel(List<BuildingUnit> unitList, BuildingUnitMix desiredUnitMix, Line2D mainCorridor, Line2D leftLeg, Line2D middleLeg, Line2D rightLeg, double unitDepth, double hallWidth)
-        {
-            List<Polygon2D> polyUnits = new List<Polygon2D>();
-            List<string> unitNames = new List<string>();
-            List<Line2D> shearWallLines = new List<Line2D>();
-            List<Line2D> lineList = new List<Line2D>();
-            MainCorridor mainCorridorObject = new MainCorridor();
-
-            GetBuildingLayout(unitList, desiredUnitMix, mainCorridor, leftLeg, middleLeg, rightLeg, unitDepth, hallWidth, out polyUnits, out unitNames, out shearWallLines, out lineList, out mainCorridorObject);
-            var outlinePoints = GetOutlinePoints(unitDepth, hallWidth, mainCorridorObject);
-
-            
-        }
-
+    { 
 
         public static List<Point2D> GetOutlinePoints(double unitDepth, double hallWidth, MainCorridor mainCorridorObject)
         {

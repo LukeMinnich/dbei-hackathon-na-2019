@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using BuildingLayout;
 using Kataclysm.Common;
 using Kataclysm.Randomizer;
@@ -76,15 +78,26 @@ namespace Kataclysm.StructuralAnalysis.Model
             UnitBoundaries = unitBoundaries;
         }
 
-        public static SerializedModel CreateSerializedModel(List<BuildingUnit> unitList, BuildingUnitMix desiredUnitMix, Seismicity seismicity, double buildingHeight, int numberOfStories, Line2D mainCorridor, Line2D leftLeg, Line2D middleLeg, Line2D rightLeg, double unitDepth, double hallWidth, RandomizedBuilding randomizedBuilding)
+        public static SerializedModel CreateSerializedModel(string unitDefCSVPath, BuildingUnitMix desiredUnitMix, Seismicity seismicity, double buildingHeight, int numberOfStories, Line2D mainCorridor, Line2D leftLeg, Line2D middleLeg, Line2D rightLeg, double unitDepth, double hallWidth, RandomizedBuilding randomizedBuilding)
         {
+            var importedUnitList = new List<BuildingUnit>();
+
+            var csv = File.ReadAllLines(unitDefCSVPath);
+
+            for (int i = 1; i < csv.Length; i++)
+            {
+                var lineSplit = csv[i].Split(',');
+
+                importedUnitList.Add(new BuildingUnit(lineSplit[0], lineSplit[1], Convert.ToDouble(lineSplit[2]), Convert.ToDouble(lineSplit[3]), Convert.ToDouble(lineSplit[4]), Convert.ToDouble(lineSplit[5])));
+            }
+                       
             List<Polygon2D> polyUnits = new List<Polygon2D>();
             List<string> unitNames = new List<string>();
             List<Line2D> shearWallLines = new List<Line2D>();
             List<Line2D> lineList = new List<Line2D>();
             MainCorridor mainCorridorObject = new MainCorridor();
 
-            FittingAlgorithm.GetBuildingLayout(unitList, desiredUnitMix, mainCorridor, leftLeg, middleLeg, rightLeg, unitDepth, hallWidth, out polyUnits, out unitNames, out shearWallLines, out lineList, out mainCorridorObject);
+            FittingAlgorithm.GetBuildingLayout(importedUnitList, desiredUnitMix, mainCorridor, leftLeg, middleLeg, rightLeg, unitDepth, hallWidth, out polyUnits, out unitNames, out shearWallLines, out lineList, out mainCorridorObject);
             var outlinePoints = FittingAlgorithm.GetOutlinePoints(unitDepth, hallWidth, mainCorridorObject);
             var outlinePolygon = new Polygon2D(outlinePoints);
 

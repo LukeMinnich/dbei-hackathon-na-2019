@@ -61,6 +61,7 @@ namespace GenerativeBuilding
             pManager.AddTextParameter("UnitNames", "UnitNames", "UnitNames", GH_ParamAccess.list);
             pManager.AddLineParameter("ShearWallLines", "ShearWallLines", "ShearWallLines", GH_ParamAccess.list);
             pManager.AddCurveParameter("Outline", "Outline", "Outline", GH_ParamAccess.item);
+            pManager.AddNumberParameter("PercentMix", "PercentMix", "PercentMix", GH_ParamAccess.list);
         }
 
         /// <summary>
@@ -92,17 +93,25 @@ namespace GenerativeBuilding
             List<string> unitNames;
             List<Line> shearWallLines, lineList;
             PolylineCurve boundary = new PolylineCurve();
+            var unitMix = new List<double>();
 
-            GetBuildingLayout(defPath, mixPath, mainCorridor, leftLeg, middleLeg, rightLeg, unitDepth, hallWidth, out polyUnits, out unitNames, out shearWallLines, out lineList, out boundary);
+            GetBuildingLayout(defPath, mixPath, mainCorridor, leftLeg, middleLeg, rightLeg, unitDepth, hallWidth, out polyUnits, out unitNames, out shearWallLines, out lineList, out boundary, out unitMix);
+
+            var percentMixList = new List<double>()
+            {
+
+            };
+
 
             DA.SetDataList(0, polyUnits);
             DA.SetDataList(1, lineList);
             DA.SetDataList(2, unitNames);
             DA.SetDataList(3, shearWallLines);
             DA.SetData(4, boundary);
+            DA.SetDataList(5, percentMixList);
         }
 
-        private static void GetBuildingLayout(string defPath, string mixPath, Line mainCorridor, Line leftLeg, Line middleLeg, Line rightLeg, double unitDepth, double hallWidth, out List<PolylineCurve> polyUnits, out List<string> unitNames, out List<Line> shearWallLines, out List<Line> lineList, out PolylineCurve boundary)
+        private static void GetBuildingLayout(string defPath, string mixPath, Line mainCorridor, Line leftLeg, Line middleLeg, Line rightLeg, double unitDepth, double hallWidth, out List<PolylineCurve> polyUnits, out List<string> unitNames, out List<Line> shearWallLines, out List<Line> lineList, out PolylineCurve boundary, out List<double> percentMix)
         {
             var unitList = new List<BuildingUnit>();
 
@@ -116,7 +125,6 @@ namespace GenerativeBuilding
             }
 
             BuildingUnitMix desiredUnitMix = new BuildingUnitMix();
-
 
             csv = File.ReadAllLines(mixPath);
 
@@ -225,8 +233,6 @@ namespace GenerativeBuilding
                     foreach (var unitLine in unitWallLines)
                     {
                         shearWallLines.Add(new Line(new Point3d(unitLine.StartPoint.X, unitLine.StartPoint.Y, 0), new Point3d(unitLine.EndPoint.X, unitLine.EndPoint.Y, 0)));
-
-
                     }
                     var unitPoints = unitPolygon.ToPolyLine2D().Vertices;
 
@@ -239,8 +245,6 @@ namespace GenerativeBuilding
                     var unitPolyline = new PolylineCurve(point3dList);
                     polyUnits.Add(unitPolyline);
                     unitNames.Add(matchingUnit.Type);
-
-
 
                     buildingUnits.Add(matchingUnit);
 
@@ -268,6 +272,16 @@ namespace GenerativeBuilding
             var planBoundary = new PolylineCurve(boundaryPointList);
 
             boundary = planBoundary;
+
+            var percentMixFinal = new List<double> { };
+
+            foreach(var buildingMix in currentPercentage)
+            {
+                percentMixFinal.Add(buildingMix.Value);
+            }
+
+            percentMix = percentMixFinal;
+
         }
 
 
