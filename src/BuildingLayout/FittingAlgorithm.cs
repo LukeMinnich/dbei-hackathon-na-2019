@@ -82,7 +82,7 @@ namespace BuildingLayout
             var corridorLineList = new List<UnitsLine>();
 
             var leftLegObject = new Corridor();
-            if (leftLeg.Length > 0.001)
+            if (leftLeg.Length > unitDepth + hallWidth / 2)
             {
                 var leftLine2D = CreateLine2D(leftLeg);
                 location = CorridorLocation.LeftLeg;
@@ -91,7 +91,7 @@ namespace BuildingLayout
             }
 
             var midLegObject = new Corridor();
-            if (middleLeg.Length > 0.001)
+            if (middleLeg.Length > unitDepth + hallWidth / 2)
             {
                 var midLine2D = CreateLine2D(middleLeg);
                 location = CorridorLocation.MiddleLeg;
@@ -100,7 +100,7 @@ namespace BuildingLayout
             }
 
             var rightLegObject = new Corridor();
-            if (rightLeg.Length > 0.001)
+            if (rightLeg.Length > unitDepth + hallWidth / 2)
             {
                 var rightLine2D = CreateLine2D(rightLeg);
                 location = CorridorLocation.RightLeg;

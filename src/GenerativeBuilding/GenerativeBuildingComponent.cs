@@ -96,19 +96,13 @@ namespace GenerativeBuilding
             var unitMix = new List<double>();
 
             GetBuildingLayout(defPath, mixPath, mainCorridor, leftLeg, middleLeg, rightLeg, unitDepth, hallWidth, out polyUnits, out unitNames, out shearWallLines, out lineList, out boundary, out unitMix);
-
-            var percentMixList = new List<double>()
-            {
-
-            };
-
-
+              
             DA.SetDataList(0, polyUnits);
             DA.SetDataList(1, lineList);
             DA.SetDataList(2, unitNames);
             DA.SetDataList(3, shearWallLines);
             DA.SetData(4, boundary);
-            DA.SetDataList(5, percentMixList);
+            DA.SetDataList(5, unitMix);
         }
 
         private static void GetBuildingLayout(string defPath, string mixPath, Line mainCorridor, Line leftLeg, Line middleLeg, Line rightLeg, double unitDepth, double hallWidth, out List<PolylineCurve> polyUnits, out List<string> unitNames, out List<Line> shearWallLines, out List<Line> lineList, out PolylineCurve boundary, out List<double> percentMix)
@@ -143,7 +137,7 @@ namespace GenerativeBuilding
             var corridorLineList = new List<UnitsLine>();
 
             var leftLegObject = new Corridor();
-            if (leftLeg.Length > 0.001)
+            if (leftLeg.Length > unitDepth+hallWidth/2)
             {
                 var leftLine2D = CreateLine2D(leftLeg);
                 location = CorridorLocation.LeftLeg;
@@ -152,7 +146,7 @@ namespace GenerativeBuilding
             }
 
             var midLegObject = new Corridor();
-            if (middleLeg.Length > 0.001)
+            if (middleLeg.Length > unitDepth + hallWidth / 2)
             {
                 var midLine2D = CreateLine2D(middleLeg);
                 location = CorridorLocation.MiddleLeg;
@@ -161,7 +155,7 @@ namespace GenerativeBuilding
             }
 
             var rightLegObject = new Corridor();
-            if (rightLeg.Length > 0.001)
+            if (rightLeg.Length > unitDepth + hallWidth / 2)
             {
                 var rightLine2D = CreateLine2D(rightLeg);
                 location = CorridorLocation.RightLeg;
