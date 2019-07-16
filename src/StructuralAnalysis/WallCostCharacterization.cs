@@ -87,7 +87,7 @@ namespace Kataclysm.StructuralAnalysis
             SQLiteCommand sqlite_cmd;
             sqlite_cmd = dbConn.CreateCommand();
 
-            sqlite_cmd.CommandText = insertionText
+            sqlite_cmd.CommandText = insertionText;
             sqlite_cmd.ExecuteNonQuery();
         }
     }
