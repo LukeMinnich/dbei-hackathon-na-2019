@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Kataclysm.Common;
+using Kataclysm.Common.Extensions;
 using Kataclysm.Common.Geometry;
 using Kataclysm.Common.Units.Conversion;
 using Kataclysm.StructuralAnalysis.Model;
@@ -14,28 +15,47 @@ namespace Kataclysm.StructuralAnalysis
     public class AnalysisManager
     {
         private SerializedModel _serializedModel;
-        private Dictionary<BuildingLevel, MassCenter> _levelMasses;
-        private SeismicBuildingProperties _seismicBuildingProperties;
+        
+        private List<LoadCase> _loadCases;
         private List<AnalyticalWallLateral> _lateralWallList;
         
-        private EquivalentLateralForceProcedure _elf;
-        
         private List<BuildingLevelLateral2> _lateralLevels;
+        
+        private SeismicBuildingProperties _seismicBuildingProperties;
+        
+        private EquivalentLateralForceProcedure _elf;
         private LevelDataDictionary<RigidAnalysis> _rigidAnalyses;
-        private List<LoadCase> _loadCases;
-        private LevelDictionary<PointDrift> _torsionalIrregularityDriftsAtBoundaryCorners;
 
-        public AnalysisManager(SerializedModel serModel, SerializedModel serializedModel)
+        public AnalysisManager(SerializedModel serializedModel)
         {
-            _serializedModel = serModel;
+            _serializedModel = serializedModel;
+            
             _loadCases = CommonResources.ASCE7LoadCases.Values.ToList();
+            _lateralWallList = GetWallsFromBearingWalls(serializedModel.BearingWalls);
+            
+            _lateralLevels = BuildLateralLevels(_serializedModel.OneWayDecks);
+
+            _seismicBuildingProperties = new SeismicBuildingProperties(_serializedModel.SeismicParameters,
+                _serializedModel.ModelSettings, _lateralLevels);
+        }
+
+        private List<AnalyticalWallLateral> GetWallsFromBearingWalls(List<BearingWall> bearingWalls)
+        {
+            var shearWalls = bearingWalls.Where(w => w.IsShearWall.Value && !w.HasOpening);
+
+            var lateralWalls = new List<AnalyticalWallLateral>();
+            
+            foreach (BearingWall wall in shearWalls)
+            {
+                lateralWalls.Add(new AnalyticalWallLateral(wall.UniqueId, wall.EndI.Value.ToPoint2D(),
+                    wall.EndJ.Value.ToPoint2D()));
+            }
+
+            return lateralWalls;
         }
 
         public void Run()
         {
-            // Revised Rigid Analysis
-            _lateralLevels = BuildLateralLevels(_levelMasses, _serializedModel.OneWayDecks);
-            
             _elf = new EquivalentLateralForceProcedure(_lateralLevels, _seismicBuildingProperties,
                 new Length(_serializedModel.ModelSettings.BuildingHeight, LengthUnit.Inch));
             
@@ -46,20 +66,13 @@ namespace Kataclysm.StructuralAnalysis
             AnalyzeRigid();
         }
 
-        private List<BuildingLevelLateral2> BuildLateralLevels(Dictionary<BuildingLevel, MassCenter> levelMasses,
-            List<OneWayDeck> decks)
+        private List<BuildingLevelLateral2> BuildLateralLevels(List<OneWayDeck> decks)
         {
             var levels = new List<BuildingLevelLateral2>();
 
-            foreach (BuildingLevel level in levelMasses.Keys)
+            foreach (OneWayDeck deck in decks)
             {
-                List<OneWayDeck> decksAtLevel = decks.Where(d => d.Level.Equals(level)).ToList();
-                
-                Debug.Assert(decksAtLevel.Count== 1);
-
-                Polygon2D boundary = decksAtLevel[0].Boundary.ProjectToHorizontalPlane();
-
-                levels.Add(new BuildingLevelLateral2(level, levelMasses[level], boundary));
+                levels.Add(new BuildingLevelLateral2(deck));
             }
 
             return levels;
@@ -86,6 +99,5 @@ namespace Kataclysm.StructuralAnalysis
         {
             _rigidAnalyses.Values.ForEach(a => a.Analyze());
         }
-        
     }
 }

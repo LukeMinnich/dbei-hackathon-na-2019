@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Text;
 using Kataclysm.Common;
 using Kataclysm.Common.Units.Conversion;
+using Kataclysm.StructuralAnalysis.Model;
 using Kataclysm.StructuralAnalysis.Rigid;
 using Katerra.Apollo.Structures.Common.Units;
 using MathNet.Spatial.Euclidean;
@@ -21,27 +22,28 @@ namespace Kataclysm.StructuralAnalysis.Tests
 
             var lateralWalls = new List<AnalyticalWallLateral>();
 
-            lateralWalls.Add(new AnalyticalWallLateral("Wall A", new ForcePerLength(20, ForcePerLengthUnit.KipPerInch),
-                new Point2D(0, 0), new Point2D(0, 240)));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall A", new Point2D(0, 0), new Point2D(0, 240)));
 
-            lateralWalls.Add(new AnalyticalWallLateral("Wall B", new ForcePerLength(20, ForcePerLengthUnit.KipPerInch),
-                new Point2D(360, 0), new Point2D(360, 240)));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall B", new Point2D(360, 0), new Point2D(360, 240)));
 
-            lateralWalls.Add(new AnalyticalWallLateral("Wall C", new ForcePerLength(20, ForcePerLengthUnit.KipPerInch),
-                new Point2D(0, 240), new Point2D(360, 240)));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall C", new Point2D(0, 0), new Point2D(360, 0)));
 
-            lateralWalls.Add(new AnalyticalWallLateral("Wall D", new ForcePerLength(20, ForcePerLengthUnit.KipPerInch),
-                new Point2D(0, 0), new Point2D(360, 0)));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall D", new Point2D(0, 240), new Point2D(360, 240)));
 
-            var mass = new MassCenter(new Point2D(120, 180), 0);
-            
-            var lateralLevel = new BuildingLevelLateral2(level, mass, new Polygon2D(new List<Point2D>
+            var deck = new OneWayDeck
             {
-                new Point2D(0, 0),
-                new Point2D(0, 240),
-                new Point2D(360, 240),
-                new Point2D(360, 0)
-            }));
+                Level = level,
+                Boundary = new Polygon2D(new List<Point2D>
+                {
+                    new Point2D(0, 0),
+                    new Point2D(0, 240),
+                    new Point2D(360, 240),
+                    new Point2D(360, 0)
+                }),
+                WeightPerArea = new Stress(40, StressUnit.psf)
+            };
+            
+            var lateralLevel = new BuildingLevelLateral2(deck);
             
             var forces = new List<LateralLevelForce>
             {

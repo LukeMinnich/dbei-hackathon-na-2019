@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d0e1618-cabf-4b5f-a8ce-57b236ff50d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Common/Extensions/DataTableExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Extensions/ObjectExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/Alignment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/ColumnDataType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/ColumnDisplaySettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/Html.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/NumericDisplaySettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/Row.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/SortOrder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/StringCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/StringDisplaySettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Common/Reporting/Table.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/RigidAnalysisTabularReport.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/TorsionalIrregularityStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/AnalysisManagerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/indexLayout.xml" afterDir="false" />
@@ -24,12 +11,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Kataclysm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Kataclysm/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Kataclysm/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Kataclysm/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Kataclysm/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Kataclysm/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Kataclysm/v15/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Kataclysm/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Kataclysm/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Kataclysm.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Kataclysm.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.Common.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.Common.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.Common.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.Randomizer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.Randomizer.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Common.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Extensions/Polygon2DExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Extensions/Polygon2DExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/PointLoad3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/PointLoad3D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/obj/Common.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Common.csproj.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/obj/Common.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Common.csproj.nuget.g.props" afterDir="false" />
@@ -40,6 +36,8 @@
       <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Common.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Common.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Common.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Common.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Common.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Common.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Kataclysm.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Kataclysm.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Kataclysm.Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/Debug/netstandard2.0/Kataclysm.Common.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Common/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Randomizer/Randomizer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Randomizer/Randomizer.csproj" afterDir="false" />
@@ -52,8 +50,15 @@
       <change beforePath="$PROJECT_DIR$/src/Randomizer/obj/Randomizer.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/Randomizer/obj/Randomizer.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Randomizer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Randomizer/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Randomizer/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Randomizer/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/MassCenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/MassCenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/AnalysisManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/AnalysisManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/Model/OneWayDeck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/Model/OneWayDeck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/Model/SerializedModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/Model/SerializedModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWallLateral.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWallLateral.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/BuildingLevelLateral2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/BuildingLevelLateral2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/SeismicBuildingProperties.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/SeismicBuildingProperties.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/StructuralAnalysis.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/StructuralAnalysis.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/Kataclysm.StructuralAnalysis.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/StructuralAnalysis.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/StructuralAnalysis.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/StructuralAnalysis.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/StructuralAnalysis.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/StructuralAnalysis.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/obj/Debug/netstandard2.0/StructuralAnalysis.assets.cache" afterDir="false" />
@@ -65,6 +70,18 @@
       <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/obj/StructuralAnalysis.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/obj/StructuralAnalysis.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StructuralAnalysis/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/StructuralAnalysis/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/StructuralAnalysis.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/StructuralAnalysis.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.0/StructuralAnalysis.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.0/StructuralAnalysis.Tests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.0/StructuralAnalysis.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.0/StructuralAnalysis.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.0/StructuralAnalysis.Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.0/StructuralAnalysis.Tests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.2/StructuralAnalysis.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.2/StructuralAnalysis.Tests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.2/StructuralAnalysis.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/Debug/netcoreapp2.2/StructuralAnalysis.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/StructuralAnalysis.Tests.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/StructuralAnalysis.Tests.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/StructuralAnalysis.Tests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/StructuralAnalysis.Tests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/StructuralAnalysis.Tests.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/StructuralAnalysis.Tests.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,143 +90,147 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Reporting/Table.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="198" column="57" selection-start-line="198" selection-start-column="57" selection-end-line="198" selection-end-column="57" />
-              <folding>
-                <marker date="1563237245080" expanded="true" signature="6:266" ph="..." />
-                <marker date="1563237245080" expanded="true" signature="304:9925" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="329:9923" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="806:965" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="1013:1211" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="1069:1161" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="1350:1571" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="1644:1726" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="1767:1817" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="1850:1904" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="2010:2471" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="2071:2184" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="2234:2366" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="2516:3044" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="2542:3034" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="2687:3020" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="2808:2956" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="3126:4211" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="3228:4201" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="3348:3816" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="4281:5397" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="5034:5153" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="5488:5849" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="5643:5739" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="5944:6338" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="6100:6214" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="6418:6567" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="6637:6719" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="6870:7018" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="7221:7481" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="7752:8085" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="8156:8243" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="8306:8483" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="8563:8785" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="8840:9127" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="8975:9082" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="9184:9702" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="9319:9657" ph="{...}" />
-                <marker date="1563237245080" expanded="true" signature="9760:9917" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Reporting/SortOrder.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-              <folding>
-                <marker date="1563237467159" expanded="true" signature="60:419" ph="{...}" />
-                <marker date="1563237467159" expanded="true" signature="103:417" ph="{...}" />
-                <marker date="1563237467159" expanded="true" signature="391:411" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/AnalysisManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="78" column="9" lean-forward="true" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+              <folding>
+                <marker date="1563252859325" expanded="false" signature="6:374" ph="..." />
+                <marker date="1563252859325" expanded="true" signature="414:3549" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="449:3547" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="962:1468" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="1570:2031" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="1805:1987" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="2058:2391" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="2479:2724" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="2597:2686" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="2800:3423" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="2948:3383" ph="{...}" />
+                <marker date="1563252859325" expanded="true" signature="3460:3541" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/SeismicBuildingProperties.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="22" column="64" lean-forward="true" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+              <folding>
+                <marker date="1563252353368" expanded="false" signature="6:173" ph="..." />
+                <marker date="1563252353368" expanded="true" signature="265:3695" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="310:3693" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="721:980" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="1063:1321" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="1190:1283" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="1421:1730" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="1479:1531" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="1561:1613" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="1630:1698" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="1786:2126" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="2177:3462" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="2539:2707" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="2724:2977" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="3037:3207" ph="{...}" />
+                <marker date="1563252353368" expanded="true" signature="3497:3687" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Model/BuildingParameters.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding>
+                <marker date="1563232216563" expanded="true" signature="69:294" ph="{...}" />
+                <marker date="1563232216563" expanded="true" signature="107:292" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="330">
+              <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
               <folding>
-                <marker date="1563237630877" expanded="true" signature="6:261" ph="..." />
-                <marker date="1563237630877" expanded="true" signature="307:3765" ph="{...}" />
-                <marker date="1563237630877" expanded="true" signature="363:3763" ph="{...}" />
-                <marker date="1563237630877" expanded="true" signature="441:3757" ph="{...}" />
-                <marker date="1563237630877" expanded="true" signature="1550:1712" ph="{...}" />
-                <marker date="1563237630877" expanded="true" signature="1794:2151" ph="{...}" />
-                <marker date="1563237630877" expanded="true" signature="2225:2299" ph="{...}" />
-                <marker date="1563237630877" expanded="true" signature="2605:3747" ph="/* var pointDisplacementsXDirect = new List&lt;NodalDisplacement&gt;(); ... */" />
+                <marker date="1563252502814" expanded="false" signature="6:303" ph="..." />
+                <marker date="1563252502814" expanded="true" signature="349:3663" ph="{...}" />
+                <marker date="1563252502814" expanded="true" signature="405:3661" ph="{...}" />
+                <marker date="1563252502814" expanded="true" signature="483:3655" ph="{...}" />
+                <marker date="1563252502814" expanded="true" signature="1166:1535" ph="{...}" />
+                <marker date="1563252502814" expanded="true" signature="1274:1456" ph="{...}" />
+                <marker date="1563252502814" expanded="true" signature="1692:2049" ph="{...}" />
+                <marker date="1563252502814" expanded="true" signature="2123:2197" ph="{...}" />
+                <marker date="1563252502814" expanded="true" signature="2503:3645" ph="/* var pointDisplacementsXDirect = new List&lt;NodalDisplacement&gt;(); ... */" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/RigidAnalysisTabularReport.cs">
+        <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/RigidAnalysis.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-360">
-              <caret line="88" column="92" selection-start-line="88" selection-start-column="92" selection-end-line="88" selection-end-column="92" />
+            <state relative-caret-position="452">
+              <caret line="314" column="9" lean-forward="true" selection-start-line="314" selection-start-column="9" selection-end-line="314" selection-end-column="9" />
               <folding>
-                <marker date="1563237546840" expanded="true" signature="6:239" ph="..." />
-                <marker date="1563237546840" expanded="true" signature="285:8332" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="338:8330" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="433:2966" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="1812:2929" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="2135:2915" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="3070:7058" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="5508:7021" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="5671:7007" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="5825:6940" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="6175:6314" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="7156:8324" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="7203:8314" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="7323:7715" ph="{...}" />
-                <marker date="1563237546840" expanded="true" signature="7821:8213" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWall.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-              <folding>
-                <marker date="1563237552691" expanded="false" signature="6:155" ph="..." />
-                <marker date="1563237552691" expanded="true" signature="201:2716" ph="{...}" />
-                <marker date="1563237552691" expanded="true" signature="255:2714" ph="{...}" />
-                <marker date="1563237552691" expanded="true" signature="533:761" ph="{...}" />
-                <marker date="1563237552691" expanded="true" signature="824:889" ph="{...}" />
-                <marker date="1563237552691" expanded="true" signature="1149:1486" ph="{...}" />
-                <marker date="1563237552691" expanded="true" signature="1554:1813" ph="{...}" />
-                <marker date="1563237552691" expanded="true" signature="1889:2462" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/TorsionalIrregularityStatus.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <marker date="1563237543549" expanded="true" signature="74:273" ph="{...}" />
-                <marker date="1563237543549" expanded="true" signature="120:271" ph="{...}" />
+                <marker date="1563234925363" expanded="false" signature="6:297" ph="..." />
+                <marker date="1563234925363" expanded="true" signature="343:18379" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="392:18377" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="1249:1454" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="1485:2340" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="2455:3754" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="3315:3469" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="3536:3743" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="3814:4031" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="3882:4021" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="4137:4544" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="4300:4497" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="4653:5063" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="4816:5016" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="5160:5615" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="5360:5568" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="5715:6178" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="5916:6119" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="6254:7063" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="6691:6825" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="7122:7479" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="7296:7441" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="7553:8685" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="8058:8590" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="8794:9166" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="9278:9703" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="9552:9662" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="9790:10129" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="10235:10986" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="10387:10945" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="10615:10929" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="11166:12157" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="12248:12864" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="12539:12709" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="12783:12853" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="12987:13434" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="13151:13391" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="13560:14090" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="13975:14079" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="14143:15039" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="14350:14751" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="15173:17063" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="15458:17025" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="15856:16263" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="15976:16243" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="16284:16944" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="16526:16924" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="17211:18371" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="17334:18333" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="17407:17823" ph="{...}" />
+                <marker date="1563234925363" expanded="true" signature="17901:18317" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -218,56 +239,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWallLateral.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="165">
+              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
               <folding>
-                <marker date="1563234925351" expanded="false" signature="6:155" ph="..." />
-                <marker date="1563234925351" expanded="true" signature="201:768" ph="{...}" />
-                <marker date="1563234925351" expanded="true" signature="242:766" ph="{...}" />
-                <marker date="1563234925351" expanded="true" signature="624:760" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Reporting/Html.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
-              <folding>
-                <marker date="1563237449630" expanded="true" signature="36:216" ph="{...}" />
-                <marker date="1563237449630" expanded="true" signature="67:214" ph="{...}" />
-                <marker date="1563237449630" expanded="true" signature="114:208" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Extensions/ObjectExtensions.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-              <folding>
-                <marker date="1563237402878" expanded="true" signature="52:773" ph="{...}" />
-                <marker date="1563237402878" expanded="true" signature="95:771" ph="{...}" />
-                <marker date="1563237402878" expanded="true" signature="158:758" ph="{...}" />
-                <marker date="1563237402878" expanded="true" signature="215:748" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Reporting/StringDisplaySettings.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-              <folding>
-                <marker date="1563237264982" expanded="true" signature="95:370" ph="{...}" />
-                <marker date="1563237264982" expanded="true" signature="160:368" ph="{...}" />
-                <marker date="1563237264982" expanded="true" signature="342:362" ph="{...}" />
+                <marker date="1563252502800" expanded="false" signature="6:201" ph="..." />
+                <marker date="1563252502800" expanded="true" signature="247:823" ph="{...}" />
+                <marker date="1563252502800" expanded="true" signature="288:821" ph="{...}" />
+                <marker date="1563252502800" expanded="true" signature="714:815" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -282,6 +260,7 @@
       <find>reduce</find>
       <find>k</find>
       <find>stiffness</find>
+      <find>getare</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -296,6 +275,7 @@
     <setting file="file://$PROJECT_DIR$/src/Common/BuildingLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Common/IReportsLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/52D57F27-21D6-403B-B269-6DF28E1EBA0A/7f/21251757/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/StructuralAnalysis.Tests/AnalysisManagerTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Common/SuperimposableResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/ShearWallPanelResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Common/IReportsElementId.cs" root0="FORCE_HIGHLIGHTING" />
@@ -426,10 +406,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Common/Reporting/RecordedCalculation.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Reporting/GoverningCode.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Reporting/SteelCode.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Reporting/CFSCode.cs" />
         <option value="$PROJECT_DIR$/src/Common/Reporting/WoodCode.cs" />
         <option value="$PROJECT_DIR$/src/Common/Reporting/SubCalculation.cs" />
         <option value="$PROJECT_DIR$/src/Common/Reporting/ResultLimit.cs" />
@@ -442,20 +418,17 @@
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/ASCE_7_10_Equations.cs" />
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/EquivalentLateralForceProcedure.cs" />
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/LevelHeightResolver.cs" />
-        <option value="$PROJECT_DIR$/src/StructuralAnalysis/Model/OneWayDeck.cs" />
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/GeneralLightFramedShearWall.cs" />
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/GeneralWall.cs" />
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/GeneralLightFramedWall.cs" />
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/RigidAnalysis.cs" />
         <option value="$PROJECT_DIR$/src/Common/UniformLineLoad.cs" />
-        <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWallLateral.cs" />
         <option value="$PROJECT_DIR$/src/Common/Geometry/Point3DList.cs" />
         <option value="$PROJECT_DIR$/src/Common/Extensions/Vector2DExtensions.cs" />
         <option value="$PROJECT_DIR$/src/Common/Extensions/Point2DExtensions.cs" />
         <option value="$PROJECT_DIR$/src/Common/Geometry/MinMaxBounds.cs" />
         <option value="$PROJECT_DIR$/src/Common/Geometry/Polygon2DExtensions.cs" />
         <option value="$PROJECT_DIR$/src/Common/Geometry/Polygon3D.cs" />
-        <option value="$PROJECT_DIR$/src/StructuralAnalysis/AnalysisManager.cs" />
         <option value="$PROJECT_DIR$/src/Common/Extensions/LineSegmentExtensions.cs" />
         <option value="$PROJECT_DIR$/test/StructuralAnalysis.Tests/Class1.cs" />
         <option value="$PROJECT_DIR$/test/StructuralAnalysis.Tests/StructuralAnalysis.Tests.csproj" />
@@ -476,15 +449,22 @@
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/TorsionalIrregularityStatus.cs" />
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/RigidAnalysisTabularReport.cs" />
         <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWall.cs" />
+        <option value="$PROJECT_DIR$/src/StructuralAnalysis/Model/OneWayDeck.cs" />
+        <option value="$PROJECT_DIR$/src/Common/Extensions/Polygon2DExtensions.cs" />
+        <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/BuildingLevelLateral2.cs" />
+        <option value="$PROJECT_DIR$/src/StructuralAnalysis/Model/SerializedModel.cs" />
         <option value="$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs" />
+        <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWallLateral.cs" />
+        <option value="$PROJECT_DIR$/src/StructuralAnalysis/Rigid/SeismicBuildingProperties.cs" />
+        <option value="$PROJECT_DIR$/src/StructuralAnalysis/AnalysisManager.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -494,7 +474,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -516,13 +496,13 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Kataclysm" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Common" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Reporting" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="StructuralAnalysis" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Kataclysm" type="24d0babc:SolutionExplorerModelNode" />
               <item name="StructuralAnalysis" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Model" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -535,33 +515,12 @@
               <item name="Kataclysm" type="24d0babc:SolutionExplorerModelNode" />
               <item name="StructuralAnalysis.Tests" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Kataclysm" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="StructuralAnalysis.Tests" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Kataclysm" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="StructuralAnalysis.Tests" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-              <item name=".NETCoreApp 2" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Kataclysm" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="StructuralAnalysis.Tests" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-              <item name=".NETCoreApp 2" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Packages" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -590,34 +549,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1536" height="864" extended-state="0" />
+    <frame x="-8" y="-8" width="1551" height="839" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21208054" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21529175" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" weight="0.38668555" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32719547" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Performance Profiler" weight="0.3286119" />
-      <window_info anchor="bottom" id="Build" weight="0.3286119" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Change Signature" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="NuGet" order="6" weight="0.38668555" />
+      <window_info anchor="bottom" id="Performance Profiler" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
+      <window_info anchor="bottom" id="Unit Tests" order="10" weight="0.3281471" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32719547" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="13" weight="0.3281471" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+      <window_info anchor="right" id="Debug" order="6" weight="0.65124077" />
     </layout>
   </component>
   <component name="XDebuggerManager">
@@ -629,180 +590,34 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs</url>
-          <line>82</line>
+          <line>84</line>
           <properties documentPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs" initialLine="82">
             <startOffsets>
-              <option value="3756" />
+              <option value="3654" />
             </startOffsets>
             <endOffsets>
-              <option value="3757" />
+              <option value="3655" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs" initialLine="62">
+            <startOffsets>
+              <option value="2466" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2501" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/ResultLimit.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding>
-            <marker date="1563233244125" expanded="true" signature="6:69" ph="..." />
-            <marker date="1563233244125" expanded="true" signature="107:1561" ph="{...}" />
-            <marker date="1563233244125" expanded="true" signature="154:1559" ph="{...}" />
-            <marker date="1563233244125" expanded="true" signature="353:398" ph="{...}" />
-            <marker date="1563233244125" expanded="true" signature="439:1362" ph="{...}" />
-            <marker date="1563233244125" expanded="true" signature="475:1352" ph="{...}" />
-            <marker date="1563233244125" expanded="true" signature="1406:1553" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/ResultLimitType.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding>
-            <marker date="1563232872332" expanded="false" signature="6:56" ph="..." />
-            <marker date="1563232872332" expanded="true" signature="94:338" ph="{...}" />
-            <marker date="1563232872332" expanded="true" signature="177:336" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/SteelCode.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <marker date="1563233159889" expanded="false" signature="6:85" ph="..." />
-            <marker date="1563233159889" expanded="true" signature="123:329" ph="{...}" />
-            <marker date="1563233159889" expanded="true" signature="200:327" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/SubCalculation.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding>
-            <marker date="1563233256729" expanded="false" signature="6:281" ph="..." />
-            <marker date="1563233256729" expanded="true" signature="319:11372" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="353:11370" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="892:1824" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="918:1777" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="967:1039" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="1076:1763" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="2373:2692" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="3038:3109" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="3177:3262" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="3349:3447" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="3504:3585" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="3627:3677" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="3726:3782" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="3922:4337" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="3963:4327" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="4451:6654" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="5666:5751" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="5768:5873" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="6033:6299" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="6186:6285" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="6770:8354" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="8493:8991" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="8613:8937" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="9098:10268" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="10316:10445" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="10491:11364" ph="{...}" />
-            <marker date="1563233256729" expanded="true" signature="10586:11354" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/AnalyticalElement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
-          <folding>
-            <marker date="1563233516328" expanded="false" signature="6:195" ph="..." />
-            <marker date="1563233516328" expanded="true" signature="223:17411" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="285:17409" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="1559:1579" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="1755:1994" ph="{...}" />
-            <marker date="1563233516328" expanded="false" signature="2004:3231" ph="API Functions" />
-            <marker date="1563233516328" expanded="true" signature="2878:2947" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="3027:3096" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="3148:3211" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="3297:4003" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="3585:3966" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="3655:3952" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="3733:3934" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="3819:3912" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="4051:4217" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="4265:4415" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="4425:4721" ph="/// Returns the distance from a point to a line, in 3D ... " />
-            <marker date="1563233516328" expanded="true" signature="4809:5111" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="5202:5872" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="5465:5680" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="5697:5862" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="5966:6393" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="6016:6383" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="6079:6188" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="6248:6369" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="6485:6563" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="6736:7568" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="7676:16513" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="7785:16305" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="7900:16291" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="8950:13967" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="9222:12304" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="9513:11081" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="9794:10903" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="10195:10434" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="10475:10869" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="11114:12278" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="11177:11369" ph="/* The end load is before the start load ... */" />
-            <marker date="1563233516328" expanded="true" signature="11608:11835" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="11872:12248" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="12333:13945" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="12547:12728" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="12761:13112" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="13286:13503" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="13536:13919" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="13992:15972" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="14329:15950" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="14527:14708" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="14741:15097" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="15268:15475" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="15508:15924" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="16035:16273" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="16556:16614" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="16862:17217" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="16946:17046" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="17119:17207" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="17265:17310" ph="{...}" />
-            <marker date="1563233516328" expanded="true" signature="17358:17403" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/LineLoad.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <marker date="1563233665156" expanded="false" signature="6:115" ph="..." />
-            <marker date="1563233665156" expanded="true" signature="143:957" ph="{...}" />
-            <marker date="1563233665156" expanded="true" signature="192:955" ph="{...}" />
-            <marker date="1563233665156" expanded="true" signature="542:673" ph="{...}" />
-            <marker date="1563233665156" expanded="true" signature="771:902" ph="{...}" />
-            <marker date="1563233665156" expanded="true" signature="929:949" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Common/FloorLoad.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -963,18 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Model/OneWayDeck.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding>
-            <marker date="1563234077434" expanded="true" signature="6:97" ph="..." />
-            <marker date="1563234077434" expanded="true" signature="143:334" ph="{...}" />
-            <marker date="1563234077434" expanded="true" signature="173:332" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/GeneralWall.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1003,20 +806,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/GeneralLightFramedShearWall.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/GeneralWoodShearWall.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/GeneralLightFramedShearWall.cs" />
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/GeneralWoodShearWall.cs" />
     <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/ShearWallPanelRigidAnalysisParameters.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1025,66 +816,6 @@
             <marker date="1563226957787" expanded="true" signature="86:755" ph="{...}" />
             <marker date="1563226957787" expanded="true" signature="143:753" ph="{...}" />
             <marker date="1563226957787" expanded="true" signature="282:447" ph="/// A positive signed offset will yield positive Shear demand along the wall axis when applied story Torsion is p ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/RigidAnalysis.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="330" column="110" lean-forward="true" selection-start-line="330" selection-start-column="110" selection-end-line="330" selection-end-column="110" />
-          <folding>
-            <marker date="1563234925363" expanded="false" signature="6:297" ph="..." />
-            <marker date="1563234925363" expanded="true" signature="343:18379" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="392:18377" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="1249:1454" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="1485:2340" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="2455:3754" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="3315:3469" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="3536:3743" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="3814:4031" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="3882:4021" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="4137:4544" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="4300:4497" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="4653:5063" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="4816:5016" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="5160:5615" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="5360:5568" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="5715:6178" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="5916:6119" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="6254:7063" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="6691:6825" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="7122:7479" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="7296:7441" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="7553:8685" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="8058:8590" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="8794:9166" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="9278:9703" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="9552:9662" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="9790:10129" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="10235:10986" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="10387:10945" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="10615:10929" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="11166:12157" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="12248:12864" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="12539:12709" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="12783:12853" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="12987:13434" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="13151:13391" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="13560:14090" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="13975:14079" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="14143:15039" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="14350:14751" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="15173:17063" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="15458:17025" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="15856:16263" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="15976:16243" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="16284:16944" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="16526:16924" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="17211:18371" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="17334:18333" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="17407:17823" ph="{...}" />
-            <marker date="1563234925363" expanded="true" signature="17901:18317" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1216,13 +947,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Geometry/SimplePolygon2D.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="49" column="38" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Geometry/SimplePolygon2D.cs" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/52D57F27-21D6-403B-B269-6DF28E1EBA0A/7f/21251757/Enumerable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1288,26 +1013,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/BuildingLevelLateral2.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding>
-            <marker date="1563232556812" expanded="false" signature="6:176" ph="..." />
-            <marker date="1563232556812" expanded="true" signature="222:1275" ph="{...}" />
-            <marker date="1563232556812" expanded="true" signature="279:1273" ph="{...}" />
-            <marker date="1563232556812" expanded="true" signature="834:1267" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/StructuralAnalysis.Tests/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/StructuralAnalysis.Tests/Class1.cs" />
     <entry file="file://$PROJECT_DIR$/src/Common/Extensions/LineSegmentExtensions.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1412,25 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/AnalysisManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-          <folding>
-            <marker date="1563235930578" expanded="false" signature="6:339" ph="..." />
-            <marker date="1563235930578" expanded="true" signature="379:3269" ph="{...}" />
-            <marker date="1563235930578" expanded="true" signature="414:3267" ph="{...}" />
-            <marker date="1563235930578" expanded="true" signature="1094:1228" ph="{...}" />
-            <marker date="1563235930578" expanded="true" signature="1255:1732" ph="{...}" />
-            <marker date="1563235930578" expanded="true" signature="1883:2435" ph="{...}" />
-            <marker date="1563235930578" expanded="true" signature="2016:2397" ph="{...}" />
-            <marker date="1563235930578" expanded="true" signature="2511:3134" ph="{...}" />
-            <marker date="1563235930578" expanded="true" signature="2659:3094" ph="{...}" />
-            <marker date="1563235930578" expanded="true" signature="3171:3252" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/MassCenter.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1522,31 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/StringDisplaySettings.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding>
-            <marker date="1563237264982" expanded="true" signature="95:370" ph="{...}" />
-            <marker date="1563237264982" expanded="true" signature="160:368" ph="{...}" />
-            <marker date="1563237264982" expanded="true" signature="342:362" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Extensions/ObjectExtensions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <marker date="1563237402878" expanded="true" signature="52:773" ph="{...}" />
-            <marker date="1563237402878" expanded="true" signature="95:771" ph="{...}" />
-            <marker date="1563237402878" expanded="true" signature="158:758" ph="{...}" />
-            <marker date="1563237402878" expanded="true" signature="215:748" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Common/Reporting/NumericDisplaySettings.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1559,14 +1221,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/Html.cs">
+    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/SortOrder.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        <state relative-caret-position="30">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
           <folding>
-            <marker date="1563237449630" expanded="true" signature="36:216" ph="{...}" />
-            <marker date="1563237449630" expanded="true" signature="67:214" ph="{...}" />
-            <marker date="1563237449630" expanded="true" signature="114:208" ph="{...}" />
+            <marker date="1563237467159" expanded="true" signature="60:419" ph="{...}" />
+            <marker date="1563237467159" expanded="true" signature="103:417" ph="{...}" />
+            <marker date="1563237467159" expanded="true" signature="391:411" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1576,7 +1238,7 @@
         <state relative-caret-position="195">
           <caret line="198" column="57" selection-start-line="198" selection-start-column="57" selection-end-line="198" selection-end-column="57" />
           <folding>
-            <marker date="1563237245080" expanded="true" signature="6:266" ph="..." />
+            <marker date="1563237245080" expanded="false" signature="6:266" ph="..." />
             <marker date="1563237245080" expanded="true" signature="304:9925" ph="{...}" />
             <marker date="1563237245080" expanded="true" signature="329:9923" ph="{...}" />
             <marker date="1563237245080" expanded="true" signature="806:965" ph="{...}" />
@@ -1619,65 +1281,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/SortOrder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding>
-            <marker date="1563237467159" expanded="true" signature="60:419" ph="{...}" />
-            <marker date="1563237467159" expanded="true" signature="103:417" ph="{...}" />
-            <marker date="1563237467159" expanded="true" signature="391:411" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWallLateral.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <marker date="1563234925351" expanded="false" signature="6:155" ph="..." />
-            <marker date="1563234925351" expanded="true" signature="201:768" ph="{...}" />
-            <marker date="1563234925351" expanded="true" signature="242:766" ph="{...}" />
-            <marker date="1563234925351" expanded="true" signature="624:760" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/TorsionalIrregularityStatus.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1563237543549" expanded="true" signature="74:273" ph="{...}" />
-            <marker date="1563237543549" expanded="true" signature="120:271" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWall.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <marker date="1563237552691" expanded="false" signature="6:155" ph="..." />
-            <marker date="1563237552691" expanded="true" signature="201:2716" ph="{...}" />
-            <marker date="1563237552691" expanded="true" signature="255:2714" ph="{...}" />
-            <marker date="1563237552691" expanded="true" signature="533:761" ph="{...}" />
-            <marker date="1563237552691" expanded="true" signature="824:889" ph="{...}" />
-            <marker date="1563237552691" expanded="true" signature="1149:1486" ph="{...}" />
-            <marker date="1563237552691" expanded="true" signature="1554:1813" ph="{...}" />
-            <marker date="1563237552691" expanded="true" signature="1889:2462" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/RigidAnalysisTabularReport.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
+        <state relative-caret-position="15">
           <caret line="88" column="92" selection-start-line="88" selection-start-column="92" selection-end-line="88" selection-end-column="92" />
           <folding>
-            <marker date="1563237546840" expanded="true" signature="6:239" ph="..." />
+            <marker date="1563237546840" expanded="false" signature="6:239" ph="..." />
             <marker date="1563237546840" expanded="true" signature="285:8332" ph="{...}" />
             <marker date="1563237546840" expanded="true" signature="338:8330" ph="{...}" />
             <marker date="1563237546840" expanded="true" signature="433:2966" ph="{...}" />
@@ -1696,19 +1305,308 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWall.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <marker date="1563237552691" expanded="false" signature="6:155" ph="..." />
+            <marker date="1563237552691" expanded="true" signature="201:2716" ph="{...}" />
+            <marker date="1563237552691" expanded="true" signature="255:2714" ph="{...}" />
+            <marker date="1563237552691" expanded="true" signature="533:761" ph="{...}" />
+            <marker date="1563237552691" expanded="true" signature="824:889" ph="{...}" />
+            <marker date="1563237552691" expanded="true" signature="1149:1486" ph="{...}" />
+            <marker date="1563237552691" expanded="true" signature="1554:1813" ph="{...}" />
+            <marker date="1563237552691" expanded="true" signature="1889:2462" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/TorsionalIrregularityStatus.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <marker date="1563237543549" expanded="true" signature="74:273" ph="{...}" />
+            <marker date="1563237543549" expanded="true" signature="120:271" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/Html.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+          <folding>
+            <marker date="1563237449630" expanded="true" signature="36:216" ph="{...}" />
+            <marker date="1563237449630" expanded="true" signature="67:214" ph="{...}" />
+            <marker date="1563237449630" expanded="true" signature="114:208" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Extensions/ObjectExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding>
+            <marker date="1563237402878" expanded="true" signature="52:773" ph="{...}" />
+            <marker date="1563237402878" expanded="true" signature="95:771" ph="{...}" />
+            <marker date="1563237402878" expanded="true" signature="158:758" ph="{...}" />
+            <marker date="1563237402878" expanded="true" signature="215:748" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Reporting/StringDisplaySettings.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding>
+            <marker date="1563237264982" expanded="true" signature="95:370" ph="{...}" />
+            <marker date="1563237264982" expanded="true" signature="160:368" ph="{...}" />
+            <marker date="1563237264982" expanded="true" signature="342:362" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/BuildingLevel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <marker date="1563223900550" expanded="false" signature="6:48" ph="..." />
+            <marker date="1563223900550" expanded="true" signature="76:878" ph="{...}" />
+            <marker date="1563223900550" expanded="true" signature="137:876" ph="{...}" />
+            <marker date="1563223900550" expanded="true" signature="281:361" ph="{...}" />
+            <marker date="1563223900550" expanded="true" signature="410:479" ph="{...}" />
+            <marker date="1563223900550" expanded="true" signature="526:603" ph="{...}" />
+            <marker date="1563223900550" expanded="true" signature="646:705" ph="{...}" />
+            <marker date="1563223900550" expanded="true" signature="748:870" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Model/SerializedModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+          <folding>
+            <marker date="1563250966698" expanded="false" signature="6:57" ph="..." />
+            <marker date="1563250966698" expanded="true" signature="103:454" ph="{...}" />
+            <marker date="1563250966698" expanded="true" signature="138:452" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/BuildingLevelLateral2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <marker date="1563250270146" expanded="false" signature="6:253" ph="..." />
+            <marker date="1563250270146" expanded="true" signature="299:1267" ph="{...}" />
+            <marker date="1563250270146" expanded="true" signature="356:1265" ph="{...}" />
+            <marker date="1563250270146" expanded="true" signature="855:1259" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Extensions/Polygon2DExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1815">
+          <caret line="125" column="49" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
+          <folding>
+            <marker date="1563241987566" expanded="false" signature="6:128" ph="..." />
+            <marker date="1563241987566" expanded="true" signature="167:4315" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="213:4313" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="370:1337" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="572:1246" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="677:1232" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="1440:1607" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="1686:2552" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="1850:2507" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="2023:2493" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="2368:2475" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="2749:2822" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="3026:3341" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="3113:3302" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="3467:4307" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="3644:4100" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="3773:3851" ph="{...}" />
+            <marker date="1563241987566" expanded="true" signature="3872:3946" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Model/OneWayDeck.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <marker date="1563240093754" expanded="false" signature="6:201" ph="..." />
+            <marker date="1563240093754" expanded="true" signature="247:700" ph="{...}" />
+            <marker date="1563240093754" expanded="true" signature="277:698" ph="{...}" />
+            <marker date="1563240093754" expanded="true" signature="495:692" ph="{...}" />
+            <marker date="1563240093754" expanded="true" signature="521:682" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/StructuralAnalysis.Tests/AnalysisManagerTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1563238978847" expanded="true" signature="44:107" ph="{...}" />
+            <marker date="1563238978847" expanded="true" signature="84:105" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/StructuralAnalysis.Tests/RigidAnalysisTests.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="330">
+          <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
           <folding>
-            <marker date="1563237630877" expanded="true" signature="6:261" ph="..." />
-            <marker date="1563237630877" expanded="true" signature="307:3765" ph="{...}" />
-            <marker date="1563237630877" expanded="true" signature="363:3763" ph="{...}" />
-            <marker date="1563237630877" expanded="true" signature="441:3757" ph="{...}" />
-            <marker date="1563237630877" expanded="true" signature="1550:1712" ph="{...}" />
-            <marker date="1563237630877" expanded="true" signature="1794:2151" ph="{...}" />
-            <marker date="1563237630877" expanded="true" signature="2225:2299" ph="{...}" />
-            <marker date="1563237630877" expanded="true" signature="2605:3747" ph="/* var pointDisplacementsXDirect = new List&lt;NodalDisplacement&gt;(); ... */" />
+            <marker date="1563252502814" expanded="false" signature="6:303" ph="..." />
+            <marker date="1563252502814" expanded="true" signature="349:3663" ph="{...}" />
+            <marker date="1563252502814" expanded="true" signature="405:3661" ph="{...}" />
+            <marker date="1563252502814" expanded="true" signature="483:3655" ph="{...}" />
+            <marker date="1563252502814" expanded="true" signature="1166:1535" ph="{...}" />
+            <marker date="1563252502814" expanded="true" signature="1274:1456" ph="{...}" />
+            <marker date="1563252502814" expanded="true" signature="1692:2049" ph="{...}" />
+            <marker date="1563252502814" expanded="true" signature="2123:2197" ph="{...}" />
+            <marker date="1563252502814" expanded="true" signature="2503:3645" ph="/* var pointDisplacementsXDirect = new List&lt;NodalDisplacement&gt;(); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/AnalyticalWallLateral.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <marker date="1563252502800" expanded="false" signature="6:201" ph="..." />
+            <marker date="1563252502800" expanded="true" signature="247:823" ph="{...}" />
+            <marker date="1563252502800" expanded="true" signature="288:821" ph="{...}" />
+            <marker date="1563252502800" expanded="true" signature="714:815" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/RigidAnalysis.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="314" column="9" lean-forward="true" selection-start-line="314" selection-start-column="9" selection-end-line="314" selection-end-column="9" />
+          <folding>
+            <marker date="1563234925363" expanded="false" signature="6:297" ph="..." />
+            <marker date="1563234925363" expanded="true" signature="343:18379" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="392:18377" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="1249:1454" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="1485:2340" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="2455:3754" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="3315:3469" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="3536:3743" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="3814:4031" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="3882:4021" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="4137:4544" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="4300:4497" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="4653:5063" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="4816:5016" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="5160:5615" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="5360:5568" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="5715:6178" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="5916:6119" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="6254:7063" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="6691:6825" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="7122:7479" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="7296:7441" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="7553:8685" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="8058:8590" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="8794:9166" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="9278:9703" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="9552:9662" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="9790:10129" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="10235:10986" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="10387:10945" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="10615:10929" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="11166:12157" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="12248:12864" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="12539:12709" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="12783:12853" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="12987:13434" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="13151:13391" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="13560:14090" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="13975:14079" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="14143:15039" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="14350:14751" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="15173:17063" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="15458:17025" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="15856:16263" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="15976:16243" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="16284:16944" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="16526:16924" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="17211:18371" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="17334:18333" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="17407:17823" ph="{...}" />
+            <marker date="1563234925363" expanded="true" signature="17901:18317" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Model/BuildingParameters.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <marker date="1563232216563" expanded="true" signature="69:294" ph="{...}" />
+            <marker date="1563232216563" expanded="true" signature="107:292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/Rigid/SeismicBuildingProperties.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="64" lean-forward="true" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+          <folding>
+            <marker date="1563252353368" expanded="false" signature="6:173" ph="..." />
+            <marker date="1563252353368" expanded="true" signature="265:3695" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="310:3693" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="721:980" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="1063:1321" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="1190:1283" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="1421:1730" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="1479:1531" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="1561:1613" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="1630:1698" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="1786:2126" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="2177:3462" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="2539:2707" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="2724:2977" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="3037:3207" ph="{...}" />
+            <marker date="1563252353368" expanded="true" signature="3497:3687" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StructuralAnalysis/AnalysisManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="78" column="9" lean-forward="true" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+          <folding>
+            <marker date="1563252859325" expanded="false" signature="6:374" ph="..." />
+            <marker date="1563252859325" expanded="true" signature="414:3549" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="449:3547" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="962:1468" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="1570:2031" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="1805:1987" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="2058:2391" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="2479:2724" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="2597:2686" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="2800:3423" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="2948:3383" ph="{...}" />
+            <marker date="1563252859325" expanded="true" signature="3460:3541" ph="{...}" />
           </folding>
         </state>
       </provider>

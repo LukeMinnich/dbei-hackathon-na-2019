@@ -1,0 +1,45 @@
+Description,Predominant_Direction,Loading01_Factor,Loading01_Pattern,Loading02_Factor,Loading02_Pattern,Loading03_Factor,Loading03_Pattern,Loading04_Factor,Loading04_Pattern
++X + TX,X,1,Seismic East,1,Seismic Torsion X,,,,
++X - TX,X,1,Seismic East,-1,Seismic Torsion X,,,,
+-X + TX,X,1,Seismic West,1,Seismic Torsion X,,,,
+-X - TX,X,1,Seismic West,-1,Seismic Torsion X,,,,
++Y + TY,Y,1,Seismic North,1,Seismic Torsion Y,,,,
++Y - TY,Y,1,Seismic North,-1,Seismic Torsion Y,,,,
+-Y + TY,Y,1,Seismic South,1,Seismic Torsion Y,,,,
+-Y - TY,Y,1,Seismic South,-1,Seismic Torsion Y,,,,
++X (Fpx),X,1,Seismic Diaphragm East,,,,,,
+-X (Fpx),X,1,Seismic Diaphragm West,,,,,,
++Y (Fpx),Y,1,Seismic Diaphragm North,,,,,,
+-Y (Fpx),Y,1,Seismic Diaphragm South,,,,,,
+Case 1: +X,X,1,Wind East,,,,,,
+Case 1: -X,X,1,Wind West,,,,,,
+Case 1: +Y,Y,1,Wind North,,,,,,
+Case 1: -Y,Y,1,Wind South,,,,,,
+Case 2: +0.75X + 0.75TX,X,0.75,Wind East,0.75,Wind Torsion East,,,,
+Case 2: +0.75X - 0.75TX,X,0.75,Wind East,-0.75,Wind Torsion East,,,,
+Case 2: -0.75X + 0.75TX,X,0.75,Wind West,0.75,Wind Torsion West,,,,
+Case 2: -0.75X - 0.75TX,X,0.75,Wind West,-0.75,Wind Torsion West,,,,
+Case 2: +0.75Y + 0.75TY,Y,0.75,Wind North,0.75,Wind Torsion North,,,,
+Case 2: +0.75Y - 0.75TY,Y,0.75,Wind North,-0.75,Wind Torsion North,,,,
+Case 2: -0.75Y + 0.75TY,Y,0.75,Wind South,0.75,Wind Torsion South,,,,
+Case 2: -0.75Y - 0.75TY,Y,0.75,Wind South,-0.75,Wind Torsion South,,,,
+Case 3: +0.75X + 0.75Y,Both,0.75,Wind East,0.75,Wind North,,,,
+Case 3: +0.75X - 0.75Y,Both,0.75,Wind East,0.75,Wind South,,,,
+Case 3: -0.75X - 0.75Y,Both,0.75,Wind West,0.75,Wind South,,,,
+Case 3: -0.75X + 0.75Y,Both,0.75,Wind West,0.75,Wind North,,,,
+Case 4: +0.563X + 0.563Y + 0.563TX + 0.563TY,Both,0.563,Wind East,0.563,Wind North,0.563,Wind Torsion East,0.563,Wind Torsion North
+Case 4: +0.563X + 0.563Y - 0.563TX + 0.563TY,Both,0.563,Wind East,0.563,Wind North,-0.563,Wind Torsion East,0.563,Wind Torsion North
+Case 4: +0.563X + 0.563Y + 0.563TX - 0.563TY,Both,0.563,Wind East,0.563,Wind North,0.563,Wind Torsion East,-0.563,Wind Torsion North
+Case 4: +0.563X + 0.563Y - 0.563TX - 0.563TY,Both,0.563,Wind East,0.563,Wind North,-0.563,Wind Torsion East,-0.563,Wind Torsion North
+Case 4: +0.563X - 0.563Y + 0.563TX + 0.563TY,Both,0.563,Wind East,0.563,Wind South,0.563,Wind Torsion East,0.563,Wind Torsion South
+Case 4: +0.563X - 0.563Y - 0.563TX + 0.563TY,Both,0.563,Wind East,0.563,Wind South,-0.563,Wind Torsion East,0.563,Wind Torsion South
+Case 4: +0.563X - 0.563Y + 0.563TX - 0.563TY,Both,0.563,Wind East,0.563,Wind South,0.563,Wind Torsion East,-0.563,Wind Torsion South
+Case 4: +0.563X - 0.563Y - 0.563TX - 0.563TY,Both,0.563,Wind East,0.563,Wind South,-0.563,Wind Torsion East,-0.563,Wind Torsion South
+Case 4: -0.563X + 0.563Y + 0.563TX + 0.563TY,Both,0.563,Wind West,0.563,Wind North,0.563,Wind Torsion West,0.563,Wind Torsion North
+Case 4: -0.563X + 0.563Y - 0.563TX + 0.563TY,Both,0.563,Wind West,0.563,Wind North,-0.563,Wind Torsion West,0.563,Wind Torsion North
+Case 4: -0.563X + 0.563Y + 0.563TX - 0.563TY,Both,0.563,Wind West,0.563,Wind North,0.563,Wind Torsion West,-0.563,Wind Torsion North
+Case 4: -0.563X + 0.563Y - 0.563TX - 0.563TY,Both,0.563,Wind West,0.563,Wind North,-0.563,Wind Torsion West,-0.563,Wind Torsion North
+Case 4: -0.563X - 0.563Y + 0.563TX + 0.563TY,Both,0.563,Wind West,0.563,Wind South,0.563,Wind Torsion West,0.563,Wind Torsion South
+Case 4: -0.563X - 0.563Y - 0.563TX + 0.563TY,Both,0.563,Wind West,0.563,Wind South,-0.563,Wind Torsion West,0.563,Wind Torsion South
+Case 4: -0.563X - 0.563Y + 0.563TX - 0.563TY,Both,0.563,Wind West,0.563,Wind South,0.563,Wind Torsion West,-0.563,Wind Torsion South
+Case 4: -0.563X - 0.563Y - 0.563TX - 0.563TY,Both,0.563,Wind West,0.563,Wind South,-0.563,Wind Torsion West,-0.563,Wind Torsion South

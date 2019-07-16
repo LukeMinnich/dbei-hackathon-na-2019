@@ -201,6 +201,7 @@
         <e p="StructuralAnalysis.csproj" t="IncludeRecursive" />
       </e>
       <e p="test\StructuralAnalysis.Tests" t="IncludeRecursive">
+        <e p="AnalysisManagerTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">

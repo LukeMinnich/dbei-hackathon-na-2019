@@ -1,41 +1,41 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Kataclysm.Common;
+using Kataclysm.Common.Units.Conversion;
 using Kataclysm.StructuralAnalysis.Model;
+using Katerra.Apollo.Structures.Common.Units;
 
 namespace Kataclysm.StructuralAnalysis.Rigid
 {
     public class SeismicBuildingProperties
     {
         public SeismicParameters SeismicParameters { get; set; }
-        public BuildingParameters BuildingParameters { get; set; }
+//        public BuildingParameters BuildingParameters { get; set; }
         public double BuildingWeight { get; set; }
-        public double RedundancyFactor { get; set; }
         public double k { get; set; }
         public double T { get; set; }
 
-        private Dictionary<BuildingLevel, MassCenter> _levelMasses;
-
-        public SeismicBuildingProperties(SeismicParameters seismicParameters, ModelSettings modelSettings,
-            Dictionary<BuildingLevel,MassCenter> levelMasses)
+        public SeismicBuildingProperties(SeismicParameters seismicParameters, ModelSettings modelSettings, List<BuildingLevelLateral2> levels)
         {
             SeismicParameters = seismicParameters;
-            _levelMasses = levelMasses;
-            BuildingWeight = CalculateBuildingMass(levelMasses);
+            BuildingWeight = CalculateBuildingWeight(levels).ConvertTo(ForceUnit.Kip);
             T = ApproximatePeriod(modelSettings.BuildingHeight);
             k = CalculateKfactor();
         }
 
-        private double CalculateBuildingMass(Dictionary<BuildingLevel, MassCenter> levelMasses)
+        private Force CalculateBuildingWeight(List<BuildingLevelLateral2> levels)
         {
-            double mass = 0;
-            foreach (KeyValuePair<BuildingLevel,MassCenter> KVP in levelMasses)
+            Force weight = new Force(0, ForceUnit.Kip);
+
+            foreach (BuildingLevelLateral2 level in levels)
             {
-                mass += KVP.Value.Weight;
+                weight = (Force) (weight + level.SeismicWeight);
             }
 
-            return mass;
+            return weight;
         }
+        
         public double CalculateKfactor()
         // k exponent for ASCE 7 equation 12.8-12
         {
