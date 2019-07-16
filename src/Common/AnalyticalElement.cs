@@ -351,33 +351,5 @@ namespace Kataclysm.Common
         {
             return ($"element {ID}");
         }
-
-        protected abstract void ApplySelfWeight();
-
-        protected abstract double GetSelfWeightLineLoadMagnitude();
-
-        public abstract List<FloorLoad> GetSelfWeightLoadsForSeismicMass();
-
-        public void AddExternalLoad(Load3D load)
-        {
-            if (load.GetType().Equals(typeof(DistributedLoad3D)) == true)
-            {
-                _externalDistributedLoads.Add((DistributedLoad3D)load);
-            }
-            else if (load.GetType().Equals(typeof(PointLoad3D)) == true)
-            {
-                _externalPointLoads.Add((PointLoad3D)load);
-            }
-        }
-
-        public void RedefineEndI(Point3D endI)
-        {
-            EndI = endI;
-        }
-
-        public void RedefineEndJ(Point3D endJ)
-        {
-            EndJ = endJ;
-        }
     }
 }

@@ -7,18 +7,5 @@ namespace Kataclysm.StructuralAnalysis.Model
         public double Cd { get; set; }
         public double Ct { get; set; }
         public double X { get; set; }
-
-        public SystemParameters()
-        {
-        }
-
-        public SystemParameters(double r, double omega, double cd, double ct, double x)
-        {
-            R = r;
-            Omega = omega;
-            Cd = cd;
-            Ct = ct;
-            X = x;
-        }
     }
 }

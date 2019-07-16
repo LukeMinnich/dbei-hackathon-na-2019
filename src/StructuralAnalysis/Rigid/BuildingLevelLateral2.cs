@@ -1,6 +1,8 @@
 using Kataclysm.Common;
+using Kataclysm.Common.Extensions;
 using Kataclysm.Common.Geometry;
 using Kataclysm.Common.Units.Conversion;
+using Kataclysm.StructuralAnalysis.Model;
 using Katerra.Apollo.Structures.Common.Units;
 using MathNet.Spatial.Euclidean;
 
@@ -20,12 +22,12 @@ namespace Kataclysm.StructuralAnalysis.Rigid
         public Point2D CenterOfRigidity { get; set; }
         public AccidentalEccentricities Eccentricities { get; set; }
 
-        public BuildingLevelLateral2(BuildingLevel level, MassCenter massCharacteristics, Polygon2D boundary)
+        public BuildingLevelLateral2(OneWayDeck deck)
         {
-            Level = level;
-            Boundary = boundary;
-            CenterOfMass = massCharacteristics.CenterOfMass;
-            SeismicWeight = new Force(massCharacteristics.Weight, ForceUnit.Kip);
+            Level = deck.Level;
+            Boundary = deck.Boundary;
+            CenterOfMass = deck.Boundary.GetCentroid();
+            SeismicWeight = deck.SeismicWeight;
 
             var bounds = Boundary.GetMinMaxBounds();
             LengthX = new Length(bounds.MaxX - bounds.MinX, LengthUnit.Inch);

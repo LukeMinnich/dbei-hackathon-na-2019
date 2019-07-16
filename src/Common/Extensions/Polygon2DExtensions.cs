@@ -73,5 +73,90 @@ namespace Kataclysm.Common.Extensions
 
             return intersections;
         }
+        
+        // Per https://stackoverflow.com/questions/1165647/how-to-determine-if-a-list-of-polygon-points-are-in-clockwise-order
+        public static double GetArea(this Polygon2D polygon)
+        {
+            return Math.Abs(polygon.SignedArea());
+        }
+        
+        // Per https://stackoverflow.com/questions/1165647/how-to-determine-if-a-list-of-polygon-points-are-in-clockwise-order
+        private static double GetSignedArea(this Polygon2D polygon)
+        {
+            double sum = 0;
+
+            foreach (var edge in polygon.Edges)
+            {
+                var pointA = edge.StartPoint;
+                var pointB = edge.EndPoint;
+
+                sum += (pointB.X - pointA.X) * (pointB.Y + pointA.Y);
+            }
+
+            return sum / 2;
+        }
+        
+        public static Point2D GetCentroid(this Polygon2D polygon)
+            // use Archimedes.geometry formulation
+        {
+            double sumX = 0;
+            double sumY = 0;
+
+            var vertices = polygon.Vertices.ToList();
+
+            for (int i = 0; i < vertices.Count; i++)
+            {
+                Point2D p0 = vertices[i];
+                Point2D p1;
+
+                if (i < vertices.Count - 1)
+                {
+                    p1 = vertices[i + 1];
+                }
+                else
+                {
+                    p1 = vertices[0];
+                }
+
+                sumX += (p0.X + p1.X) * (p0.X * p1.Y - p1.X * p0.Y);
+
+                sumY += (p0.Y + p1.Y) * (p0.X * p1.Y - p1.X * p0.Y);
+            }
+
+            double area = polygon.SignedArea();
+
+            double cx = 1.0 / (6.0 * area) * sumX;
+
+            double cy = 1.0 / (6.0 * area) * sumY;
+
+            return new Point2D(cx, cy);
+        }
+
+        public static double SignedArea(this Polygon2D polygon)
+        {
+            double sum = 0;
+
+            List<Point2D> vertices = polygon.Vertices.ToList();
+
+            for (int i = 0; i < vertices.Count; i++)
+            {
+                Point2D p0 = vertices[i];
+
+                Point2D p1;
+
+                if (i == vertices.Count - 1)
+                {
+                    p1 = vertices[0];
+                }
+                else
+                {
+                    p1 = vertices[i + 1];
+                }
+
+                sum += (p0.X * p1.Y - p1.X * p0.Y);
+            }
+
+            return sum / 2.0;
+        }
     }
 }
