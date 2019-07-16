@@ -5,9 +5,5 @@ namespace Kataclysm.StructuralAnalysis.Model
         public SystemParameters SystemParameters { get; set; }
         public BuildingParameters BuildingParameters { get; set; }
         public SiteParameters SiteParameters { get; set; }
-
-        public SeismicParameters()
-        {
-        }
     }
 }

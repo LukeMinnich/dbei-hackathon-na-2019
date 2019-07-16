@@ -24,7 +24,7 @@ namespace Kataclysm.StructuralAnalysis
         private SeismicBuildingProperties _seismicBuildingProperties;
         
         private EquivalentLateralForceProcedure _elf;
-        private LevelDataDictionary<RigidAnalysis> _rigidAnalyses;
+        public LevelDataDictionary<RigidAnalysis> RigidAnalyses { get; private set; }
 
         public AnalysisManager(SerializedModel serializedModel)
         {
@@ -41,14 +41,13 @@ namespace Kataclysm.StructuralAnalysis
 
         private List<AnalyticalWallLateral> GetWallsFromBearingWalls(List<BearingWall> bearingWalls)
         {
-            var shearWalls = bearingWalls.Where(w => w.IsShearWall.Value && !w.HasOpening);
+            var shearWalls = bearingWalls.Where(w => w.IsShearWall && !w.HasOpening);
 
             var lateralWalls = new List<AnalyticalWallLateral>();
             
             foreach (BearingWall wall in shearWalls)
             {
-                lateralWalls.Add(new AnalyticalWallLateral(wall.UniqueId, wall.EndI.Value.ToPoint2D(),
-                    wall.EndJ.Value.ToPoint2D()));
+                lateralWalls.Add(new AnalyticalWallLateral(wall));
             }
 
             return lateralWalls;
@@ -61,7 +60,7 @@ namespace Kataclysm.StructuralAnalysis
             
             _elf.Run();
 
-            _rigidAnalyses = GenerateRigidAnalyses();
+            RigidAnalyses = GenerateRigidAnalyses();
 
             AnalyzeRigid();
         }
@@ -88,7 +87,7 @@ namespace Kataclysm.StructuralAnalysis
                 
                 List<LateralLevelForce> forcesAtLevel = _elf.AppliedForces[level.Level];
 
-                analyses.Add(new RigidAnalysis(level, wallsAtLevel, forcesAtLevel, _loadCases,
+                analyses.Add(new RigidAnalysis(level, wallsAtLevel, forcesAtLevel, CommonResources.ASCE7SeismicELFLoadCases(),
                     _serializedModel.SeismicParameters.SystemParameters.Cd));
             }
 
@@ -97,7 +96,7 @@ namespace Kataclysm.StructuralAnalysis
 
         private void AnalyzeRigid()
         {
-            _rigidAnalyses.Values.ForEach(a => a.Analyze());
+            RigidAnalyses.Values.ForEach(a => a.Analyze());
         }
     }
 }

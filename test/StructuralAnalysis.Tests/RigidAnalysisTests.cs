@@ -22,13 +22,14 @@ namespace Kataclysm.StructuralAnalysis.Tests
 
             var lateralWalls = new List<AnalyticalWallLateral>();
 
-            lateralWalls.Add(new AnalyticalWallLateral("Wall A", new Point2D(0, 0), new Point2D(0, 240)));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall A", new Point2D(0, 0), new Point2D(0, 240), level));
 
-            lateralWalls.Add(new AnalyticalWallLateral("Wall B", new Point2D(360, 0), new Point2D(360, 240)));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall B", new Point2D(360, 0), new Point2D(360, 240), level));
 
-            lateralWalls.Add(new AnalyticalWallLateral("Wall C", new Point2D(0, 0), new Point2D(360, 0)));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall C-1", new Point2D(0, 0), new Point2D(60, 0), level));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall C-2", new Point2D(300, 0), new Point2D(360, 0), level));
 
-            lateralWalls.Add(new AnalyticalWallLateral("Wall D", new Point2D(0, 240), new Point2D(360, 240)));
+            lateralWalls.Add(new AnalyticalWallLateral("Wall D", new Point2D(0, 240), new Point2D(360, 240), level));
 
             var deck = new OneWayDeck
             {
@@ -63,25 +64,6 @@ namespace Kataclysm.StructuralAnalysis.Tests
             var table = RigidAnalysisTabularReport.GenerateShearWallForceStiffnessTable(analysis);
 
             sB.Append(table.PrintToMarkdown());
-
-//            var pointDisplacementsXDirect = new List<NodalDisplacement>();
-//
-//            foreach (Point2D coordinate in analysis.LateralLevel.Boundary.Vertices)
-//            {
-//                pointDisplacementsXDirect.Add(analysis.DetermineRigidbodyPointDisplacement(coordinate, LoadPattern.Seismic_West));
-//            }
-//            
-//            Assert.That(pointDisplacementsXDirect[0].Ux, Is.EqualTo(-0.0156).Within(1e-3));
-//            Assert.That(pointDisplacementsXDirect[0].Uy, Is.EqualTo( 0.0031).Within(1e-3));
-//            
-//            Assert.That(pointDisplacementsXDirect[0].Ux, Is.EqualTo(-0.0156).Within(1e-3));
-//            Assert.That(pointDisplacementsXDirect[0].Uy, Is.EqualTo( 0.0031).Within(1e-3));
-//            
-//            Assert.That(pointDisplacementsXDirect[2].Ux, Is.EqualTo(-0.0115).Within(1e-3));
-//            Assert.That(pointDisplacementsXDirect[2].Uy, Is.EqualTo(-0.0031).Within(1e-3));
-//            
-//            Assert.That(pointDisplacementsXDirect[3].Ux, Is.EqualTo(-0.0156).Within(1e-3));
-//            Assert.That(pointDisplacementsXDirect[3].Uy, Is.EqualTo(-0.0031).Within(1e-3));
         }
     }
 }
