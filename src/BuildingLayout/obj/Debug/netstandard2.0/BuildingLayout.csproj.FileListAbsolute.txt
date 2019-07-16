@@ -1,9 +1,0 @@
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\bin\Debug\netstandard2.0\BuildingLayout.deps.json
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\bin\Debug\netstandard2.0\BuildingLayout.dll
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\bin\Debug\netstandard2.0\BuildingLayout.pdb
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.csprojAssemblyReference.cache
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.csproj.CoreCompileInputs.cache
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.AssemblyInfoInputs.cache
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.AssemblyInfo.cs
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.dll
-C:\dev\dbei-hackathon-na-2019\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.pdb
