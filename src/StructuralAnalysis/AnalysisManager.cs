@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -53,7 +54,7 @@ namespace Kataclysm.StructuralAnalysis
             return lateralWalls;
         }
 
-        public void Run()
+        public WallCostCharacterization Run()
         {
             _elf = new EquivalentLateralForceProcedure(_lateralLevels, _seismicBuildingProperties,
                 new Length(_serializedModel.ModelSettings.BuildingHeight, LengthUnit.Inch));
@@ -63,6 +64,22 @@ namespace Kataclysm.StructuralAnalysis
             RigidAnalyses = GenerateRigidAnalyses();
 
             AnalyzeRigid();
+
+            return CharacterizeAllWallCosts();
+        }
+
+        private WallCostCharacterization CharacterizeAllWallCosts()
+        {
+            
+            
+            foreach (BuildingLevelLateral2 level in _lateralLevels)
+            {
+                var analysis = RigidAnalyses[level.Level];
+                
+                
+            }
+            
+            throw new NotImplementedException();
         }
 
         private List<BuildingLevelLateral2> BuildLateralLevels(List<OneWayDeck> decks)
