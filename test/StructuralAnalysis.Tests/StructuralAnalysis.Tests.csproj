@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+        <AssemblyName>Kataclysm.StructuralAnalysis.Tests</AssemblyName>
+        <RootNamespace>Kataclysm.StructuralAnalysis.Tests</RootNamespace>
+        <Platforms>AnyCPU;x64</Platforms>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <OutputPath>$(SolutionDir)bin\Debug</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <OutputPath>$(SolutionDir)bin\Debug</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <OutputPath>$(SolutionDir)bin\Release</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <OutputPath>$(SolutionDir)bin\Release</OutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+        <PackageReference Include="NUnit" Version="3.11.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.11.2" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Common\Common.csproj" />
+      <ProjectReference Include="..\..\src\StructuralAnalysis\StructuralAnalysis.csproj" />
+    </ItemGroup>
+
+</Project>

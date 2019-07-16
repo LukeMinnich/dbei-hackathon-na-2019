@@ -1,4 +1,7 @@
 using Kataclysm.Common;
+using Kataclysm.Common.Geometry;
+using Kataclysm.Common.Units.Conversion;
+using Katerra.Apollo.Structures.Common.Units;
 using MathNet.Spatial.Euclidean;
 
 namespace Kataclysm.StructuralAnalysis.Rigid

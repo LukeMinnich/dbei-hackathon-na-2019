@@ -1,11 +1,9 @@
-using Kataclysm.Common.Extensions;
 using MathNet.Spatial.Euclidean;
 
 namespace Kataclysm.Common
 {
     public class UniformLineLoad : LineLoad
     {
-
         private double? _magnitude;
 
         public double? Magnitude
@@ -33,16 +31,6 @@ namespace Kataclysm.Common
 
         public UniformLineLoad()
         {
-        }
-
-        public override Point2D LoadCentroid()
-        {
-            return (Line.StartPoint + 0.5 * Line.ToVector2D());
-        }
-
-        public override double LoadMagnitude()
-        {
-            return Line.Length * Magnitude.Value;
         }
     }
 }

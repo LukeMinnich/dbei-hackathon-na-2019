@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Kataclysm.Common;
+using Kataclysm.Common.Extensions;
 using MathNet.Spatial.Euclidean;
 using Newtonsoft.Json;
 
@@ -70,50 +71,6 @@ namespace Kataclysm.StructuralAnalysis.Rigid
         public override Tuple<NodalResponse, NodalResponse> EnvelopeResponsesMinMax(IEnumerable<LoadCase> loadCases)
         {
             throw new NotImplementedException();
-        }
-
-        public static NodalResponseCollection CreateFromAnalysisNode(AnalysisNode node, double Cd)
-        {
-            List<NodalForce> forces = node.NodalForces.ToList();
-            List<NodalForce> reactions = node.NodalReactions.ToList();
-            List<NodalStress> stresses = node.AverageNodalStress.ToList();
-            List<NodalDisplacement> displacements = node.Displacements.ToList();
-
-            IEnumerable<LoadPattern> loadPatterns = displacements.Select(d => d.LoadPattern);
-
-            var responses = new NodalResponseCollection(NodalResponse.FormatNodeId(node.ID), node.ToPoint2D());
-            
-            foreach (LoadPattern pattern in loadPatterns)
-            {
-                NodalDisplacement displacement = displacements.FirstOrDefault(d => d.LoadPattern == pattern);
-
-                if (displacement != null
-                    && LoadPatternTypeConverter.Convert(displacement.LoadPattern) == LoadPatternType.Earthquake)
-                {
-                    displacement = new NodalDisplacement
-                    {
-                        Ux = Cd * displacement.Ux,
-                        Uy = Cd * displacement.Uy,
-                        Rz = Cd * displacement.Rz
-                    };
-                }
-                
-                NodalForce externalForce = forces.FirstOrDefault(f => f.LoadPattern == pattern);
-                NodalForce reaction = reactions.FirstOrDefault(r => r.LoadPattern == pattern);
-                NodalStress stress = stresses.FirstOrDefault(r => r.LoadPattern == pattern);
-
-                var response = new NodalResponse(responses.ElementId, pattern, new Point2D(node.X, node.Y))
-                {
-                    Displacement = displacement ?? new NodalDisplacement {LoadPattern = pattern},
-                    ExternalForce = externalForce ?? new NodalForce(node, 0, 0, 0, pattern),
-                    Reaction = reaction ?? new NodalForce(node, 0, 0, 0, pattern),
-                    Stress = stress ?? new NodalStress(node, 0, 0, 0, pattern) 
-                };
-                
-                responses.Add(response);
-            }
-
-            return responses;
         }
     }
 }

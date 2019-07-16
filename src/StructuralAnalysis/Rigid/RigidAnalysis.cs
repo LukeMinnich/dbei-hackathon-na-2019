@@ -333,7 +333,7 @@ namespace Kataclysm.StructuralAnalysis.Rigid
             var wallVector = wall.WallLine.ToVector2D();
             var wallAngleToXAxis = new Unitless(wallVector.SignedAngleTo(Vector2D.XAxis).Radians, UnitlessUnit.Radian);
             
-            var k = new ForcePerLength(wall.Stiffness, ForcePerLengthUnit.KipPerInch);
+            var k = new ForcePerLength(wall.Stiffness.ConvertTo(ForcePerLengthUnit.KipPerInch), ForcePerLengthUnit.KipPerInch);
             
             return new ShearWallPanelRigidAnalysisParameters
             {

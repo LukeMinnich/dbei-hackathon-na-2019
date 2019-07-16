@@ -10,11 +10,10 @@ namespace Kataclysm.StructuralAnalysis.Rigid
         public double Weight { get; set; }
         public List<AreaLoad> DeadLoads { get; set; }
 
-        public MassCenter(Point2D centroid, double weight, List<AreaLoad> deadLoads)
+        public MassCenter(Point2D centroid, double weight)
         {
             CenterOfMass = centroid;
             Weight = weight;
-            DeadLoads = deadLoads;
         }
     }
 }

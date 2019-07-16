@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using Kataclysm.Common;
+using Kataclysm.Common.Reporting;
 using Kataclysm.Common.Units.Conversion;
 using Katerra.Apollo.Structures.Common.Units;
 using MathNet.Spatial.Euclidean;
+using static Kataclysm.StructuralAnalysis.ASCE7_10_Equations;
 
 namespace Kataclysm.StructuralAnalysis.Rigid
 {
-    public class EquivalentLateralForceProcedure : ICalculable
+    public class EquivalentLateralForceProcedure
     {
-//        public CalculationLog CalcLog { get; } = new CalculationLog("Equivalent Lateral Force Procedure Per ASCE 7");
-
         public LevelDictionary<LateralLevelForce> AppliedForces { get; private set; }
         
         private List<BuildingLevelLateral2> _levels;
@@ -81,9 +81,7 @@ namespace Kataclysm.StructuralAnalysis.Rigid
                     X = Vx_i_x,
                     Y = Vx_i_y
                 });
-            }
-            
-            CalcLog.AddCalculation(calc);
+            };
 
             return storyShears;
         }
@@ -111,7 +109,7 @@ namespace Kataclysm.StructuralAnalysis.Rigid
                 });
             }
             
-            CalcLog.AddCalculation(calc);
+//            CalcLog.AddCalculation(calc);
 
             return storyForces;
         }
@@ -152,7 +150,7 @@ namespace Kataclysm.StructuralAnalysis.Rigid
                 });
             }
                 
-            CalcLog.AddCalculation(calc);
+//            CalcLog.AddCalculation(calc);
 
             return distributionFactors;
         }
@@ -183,7 +181,7 @@ namespace Kataclysm.StructuralAnalysis.Rigid
             Unitless C_s = Chapter_12.Section_12_8.CalculateCs(I_e, S_1, S_D1, S_DS, T_L, R,
                 _fundamentalPeriod, ref baseShearCalc);
             
-            CalcLog.AddCalculation(baseShearCalc);
+//            CalcLog.AddCalculation(baseShearCalc);
             
             return Chapter_12.Section_12_8.Eqn_12_8_1(C_s, W, ref baseShearCalc);
         }
