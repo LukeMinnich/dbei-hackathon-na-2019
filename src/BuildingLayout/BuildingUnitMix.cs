@@ -6,5 +6,9 @@ namespace BuildingLayout
 {
     public class BuildingUnitMix : Dictionary<string, double>
     {
+        public BuildingUnitMix()
+        {
+
+        }
     }
 }
