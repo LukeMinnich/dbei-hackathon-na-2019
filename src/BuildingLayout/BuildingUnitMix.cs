@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace BuildingLayout
 {
     public class BuildingUnitMix : Dictionary<string, double>
     {
-        public BuildingUnitMix()
-        {
-
-        }
+        public string Name { get; set; }
     }
 }

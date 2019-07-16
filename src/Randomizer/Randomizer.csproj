@@ -19,6 +19,7 @@
     <OutputPath>$(SolutionDir)bin\Release</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BuildingLayout\BuildingLayout.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 

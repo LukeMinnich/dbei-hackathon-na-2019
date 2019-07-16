@@ -165,12 +165,12 @@ namespace Kataclysm.StructuralAnalysis.Rigid
             double X = seismicParameters.SystemParameters.X;
             double I_e = seismicParameters.BuildingParameters.ImportanceFactor;
 
-            double S_1 = seismicParameters.SiteParameters.S1;
-            double S_D1 = seismicParameters.SiteParameters.SD1;
-            double S_DS = seismicParameters.SiteParameters.SDS;
+            double S_1 = seismicParameters.Seismicity.SiteParameters.S1;
+            double S_D1 = seismicParameters.Seismicity.SiteParameters.SD1;
+            double S_DS = seismicParameters.Seismicity.SiteParameters.SDS;
             double R = seismicParameters.SystemParameters.R;
             
-            Time T_L = new Time(seismicParameters.SiteParameters.TL);
+            Time T_L = new Time(seismicParameters.Seismicity.SiteParameters.TL);
 
             Force W = new Force(_seismicProperties.BuildingWeight, ForceUnit.Kip);
 

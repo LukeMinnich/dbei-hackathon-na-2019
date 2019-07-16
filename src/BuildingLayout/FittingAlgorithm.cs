@@ -7,7 +7,9 @@ namespace BuildingLayout
 {
     public static class FittingAlgorithm
     {
-        public static List<Tuple<string, double>> CreateUnitLine(List<BuildingUnit> unitList, BuildingUnitMix desiredUnitMix, double corridorLength, ref BuildingUnitMix currentPercentage, List<string> unitPriority, ref List<Tuple<string, double>> totalUnitList, ref double usedLength)
+        public static List<Tuple<string, double>> CreateUnitLine(List<BuildingUnit> unitList,
+            BuildingUnitMix desiredUnitMix, double corridorLength, ref BuildingUnitMix currentPercentage,
+            List<string> unitPriority, ref List<Tuple<string, double>> totalUnitList, ref double usedLength)
         {
             var unitLine = new List<Tuple<string, double>>();
 

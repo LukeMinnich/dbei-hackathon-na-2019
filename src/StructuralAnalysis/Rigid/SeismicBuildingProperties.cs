@@ -70,28 +70,28 @@ namespace Kataclysm.StructuralAnalysis.Rigid
         public double SeismicResponseCoefficent()
         {
             double R = SeismicParameters.SystemParameters.R;
-            double Cs = SeismicParameters.SiteParameters.SDS / R * SeismicParameters.BuildingParameters.ImportanceFactor;
+            double Cs = SeismicParameters.Seismicity.SiteParameters.SDS / R * SeismicParameters.BuildingParameters.ImportanceFactor;
 
             double Csmax;
             double Csmin;
             double Cstemp = 0;
             double Csused;
 
-            if (T < SeismicParameters.SiteParameters.TL)
+            if (T < SeismicParameters.Seismicity.SiteParameters.TL)
             {
-                Csmax = Math.Min(Cs, SeismicParameters.SiteParameters.SD1 / T / R * SeismicParameters.BuildingParameters.ImportanceFactor);
+                Csmax = Math.Min(Cs, SeismicParameters.Seismicity.SiteParameters.SD1 / T / R * SeismicParameters.BuildingParameters.ImportanceFactor);
             }
             else
             {
-                Csmax = Math.Min(Cs, SeismicParameters.SiteParameters.SD1 * SeismicParameters.SiteParameters.TL / Math.Pow(SeismicParameters.SiteParameters.TL, 2) / R * SeismicParameters.BuildingParameters.ImportanceFactor);
+                Csmax = Math.Min(Cs, SeismicParameters.Seismicity.SiteParameters.SD1 * SeismicParameters.Seismicity.SiteParameters.TL / Math.Pow(SeismicParameters.Seismicity.SiteParameters.TL, 2) / R * SeismicParameters.BuildingParameters.ImportanceFactor);
             }
 
-            if (SeismicParameters.SiteParameters.S1 > 0.6)
+            if (SeismicParameters.Seismicity.SiteParameters.S1 > 0.6)
             {
-                Cstemp = Math.Max(Cs, 0.5 * SeismicParameters.SiteParameters.S1 / R * SeismicParameters.BuildingParameters.ImportanceFactor);
+                Cstemp = Math.Max(Cs, 0.5 * SeismicParameters.Seismicity.SiteParameters.S1 / R * SeismicParameters.BuildingParameters.ImportanceFactor);
             }
 
-            Csmin = Math.Max(Math.Max(0.044 * SeismicParameters.SiteParameters.SDS * SeismicParameters.BuildingParameters.ImportanceFactor, 0.01), Cstemp);
+            Csmin = Math.Max(Math.Max(0.044 * SeismicParameters.Seismicity.SiteParameters.SDS * SeismicParameters.BuildingParameters.ImportanceFactor, 0.01), Cstemp);
 
             Csused = Math.Max(Math.Min(Cs, Csmax), Csmin);
 

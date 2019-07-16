@@ -1,4 +1,4 @@
-namespace Kataclysm.StructuralAnalysis.Model
+namespace Kataclysm.Common
 {
     public class SiteParameters
     {

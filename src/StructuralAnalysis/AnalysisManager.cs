@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -77,6 +78,8 @@ namespace Kataclysm.StructuralAnalysis
                 
                 
             }
+            
+            throw new NotImplementedException();
         }
 
         private List<BuildingLevelLateral2> BuildLateralLevels(List<OneWayDeck> decks)
