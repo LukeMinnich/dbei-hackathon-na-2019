@@ -12,7 +12,7 @@ namespace BuildingLayout
 
         public UnitsLine(Line2D line)
         {
-
+            Line = line;
         }
     }
 }

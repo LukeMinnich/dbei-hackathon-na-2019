@@ -20,32 +20,35 @@ namespace BuildingLayout
             var lineRight = CenterLine - moveVector;
 
             LineLeft = new List<UnitsLine>();
-            LineRight = new UnitsLine(lineRight);
+
+            var lineRightSwapped = new Line2D(lineRight.EndPoint, lineRight.StartPoint);
+
+            LineRight = new UnitsLine(lineRightSwapped);
 
             var corridorWidth = (UnitDepth * 2 + HallWidth);
 
             switch (CorridorLocation)
             {
                 case CorridorLocation.Main:
-                    if (LeftLeg != null)
+                    if (LeftLeg.LineRight != null)
                     {
-                        lineVector = CenterLine.Direction / CenterLine.Length;
+                        lineVector = CenterLine.Direction;
                         lineLeft = new Line2D(lineLeft.StartPoint + lineVector * corridorWidth, lineLeft.EndPoint);
                     }
-                    if (RightLeg != null)
+                    if (RightLeg.LineRight != null)
                     {
-                        lineVector = CenterLine.Direction / CenterLine.Length;
+                        lineVector = CenterLine.Direction;
                         lineLeft = new Line2D(lineLeft.StartPoint, lineLeft.EndPoint - lineVector * corridorWidth);
                     }
-                    if (MiddleLeg != null)
+                    if (MiddleLeg.LineRight != null)
                     {
-                        lineVector = CenterLine.Direction / CenterLine.Length;
-                        var lineLeft1 = new Line2D(lineLeft.StartPoint, MiddleLeg.CenterLine.StartPoint - lineVector * corridorWidth / 2);
-                        var lineLeft2 = new Line2D(MiddleLeg.CenterLine.StartPoint, lineLeft.StartPoint - lineVector * corridorWidth / 2);
+                        lineVector = CenterLine.Direction;
+                        var lineLeft1 = new Line2D(lineLeft.StartPoint, MiddleLeg.CenterLine.StartPoint + moveVector - lineVector * corridorWidth / 2);
+                        var lineLeft2 = new Line2D(MiddleLeg.CenterLine.StartPoint+moveVector + lineVector * corridorWidth / 2, lineLeft.EndPoint);
                         LineLeft.Add(new UnitsLine(lineLeft1));
                         LineLeft.Add(new UnitsLine(lineLeft2));
                     }
-                    else if(MiddleLeg == null)
+                    else if (MiddleLeg.LineRight == null)
                     {
                         LineLeft.Add(new UnitsLine(lineLeft));
                     }
