@@ -27,7 +27,7 @@ namespace Kataclysm.StructuralAnalysis.Model
 
         }
 
-        public SerializedModel(double buildingHeight, int numberOfStories, Seismicity seismicity, List<Line2D> wallLines, List<Line2D> corridorLines, Polygon2D outline, List<Polygon2D> unitBoundaries, RandomizedBuilding randomizedBuilding)
+        public SerializedModel(double buildingHeight, int numberOfStories, Seismicity seismicity, List<Line2D> wallLines, List<Line2D> corridorLines, Polygon2D outline, List<Polygon2D> unitBoundaries, RandomizedBuilding randomizedBuilding, double randomizedPercent)
         {
             var levels = new List<BuildingLevel>();
 
@@ -49,16 +49,20 @@ namespace Kataclysm.StructuralAnalysis.Model
             var bearingWalls = new List<BearingWall>();
             var oneWayDecks = new List<OneWayDeck>();
 
+            Random random = new Random();
+            int test = random.Next(0, 2);
+
             foreach (var level in levels)
             {
                 var wallLineID = 1;
                 foreach (var wallLine in wallLines)
                 {
-                    var wallId = level.Name + "_" + wallLineID;
-
-                    bearingWalls.Add(new BearingWall(wallId, wallLine, level));
-
-                    wallLineID += 1;
+                    if (random.NextDouble() < randomizedPercent)
+                    {
+                        var wallId = level.Name + "_" + wallLineID;
+                        bearingWalls.Add(new BearingWall(wallId, wallLine, level));
+                        wallLineID += 1;
+                    }
                 }
 
                 foreach (var wallLine in corridorLines)
@@ -80,6 +84,7 @@ namespace Kataclysm.StructuralAnalysis.Model
 
         public static SerializedModel CreateSerializedModel(string unitDefCSVPath, BuildingUnitMix desiredUnitMix, Seismicity seismicity, double buildingHeight, int numberOfStories, Line2D mainCorridor, Line2D leftLeg, Line2D middleLeg, Line2D rightLeg, double unitDepth, double hallWidth, RandomizedBuilding randomizedBuilding)
         {
+            double randomizedPercent = 0.75;
             var importedUnitList = new List<BuildingUnit>();
 
             var csv = File.ReadAllLines(unitDefCSVPath);
@@ -101,7 +106,7 @@ namespace Kataclysm.StructuralAnalysis.Model
             var outlinePoints = FittingAlgorithm.GetOutlinePoints(unitDepth, hallWidth, mainCorridorObject);
             var outlinePolygon = new Polygon2D(outlinePoints);
 
-            return new SerializedModel(buildingHeight, numberOfStories, seismicity, shearWallLines, lineList, outlinePolygon, polyUnits, randomizedBuilding);
+            return new SerializedModel(buildingHeight, numberOfStories, seismicity, shearWallLines, lineList, outlinePolygon, polyUnits, randomizedBuilding, randomizedPercent);
         }
 
     }
