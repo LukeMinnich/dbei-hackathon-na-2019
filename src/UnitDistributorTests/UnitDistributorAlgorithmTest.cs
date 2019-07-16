@@ -13,7 +13,6 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-
         }
 
         [Test]
@@ -22,7 +21,7 @@ namespace Tests
             var unitList = new List<BuildingUnit>();
 
             var path = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            var parent = Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(path).FullName).FullName).FullName).FullName);
+            var parent = Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(path).FullName).FullName).FullName).FullName).FullName);
             var filePath = parent + @"\extern\units.csv";
 
             var csv = File.ReadAllLines(filePath);
@@ -63,100 +62,17 @@ namespace Tests
                 "C",
                 "B",
                 "A",
-                "S"                
+                "S"
             };
 
-            var unitLine = new List<Tuple<string,double>>();
+            var totalUnitList = new List<Tuple<string, double>>();
+            var usedLength = 0d;
 
-            double usedLength = 0;
+            var unitLine = FittingAlgorithm.CreateUnitLine(unitList, desiredUnitMix, corridorLength, ref currentPercentage, unitPriority, ref totalUnitList, ref usedLength);
 
-            var corridorLengthRemaining = corridorLength;
-
-            var minWidth = unitList.Select(x => x.Width).Min();
-            var failInt = 0;
-
-            while (corridorLengthRemaining > 0)
-            {
-                foreach(var unit in unitPriority)
-                {
-                    if(currentPercentage[unit] < desiredUnitMix[unit])
-                    {                                                
-                        var availableUnits = unitList.Where(x => x.Type == unit).ToList();
-                        var unitLength = availableUnits.Select(x => x.Width).Min();
-
-                        if (unitLength > corridorLengthRemaining)
-                        {
-                            continue;
-                        }
-
-                        var unitArea = availableUnits.Select(x => x.Area()).Min();
-
-                        usedLength += unitLength;
-                        unitLine.Add(new Tuple<string, double>(unit, unitLength));
-
-                        corridorLengthRemaining -= unitLength;
-
-                        break;
-                    }
-                }
-
-
-                foreach (var unitCheck in unitPriority)
-                {
-                    var totalUnitLineLength = unitLine.Where(x => x.Item1 == unitCheck).Select(x => x.Item2).Sum();
-
-                    currentPercentage[unitCheck] = totalUnitLineLength / usedLength;
-                }
-
-
-                if (corridorLengthRemaining<minWidth)
-                {
-                    for (int i = 0; i < unitLine.Count; i++)
-                    {
-                        var unit = unitLine[i];
-
-                        if(currentPercentage[unit.Item1] < desiredUnitMix[unit.Item1])
-                        {
-                            var availableUnits = unitList.Where(x => x.Type == unit.Item1).ToList();
-                            var currentUnit = availableUnits.Single(x => x.Width == unit.Item2);
-                            var currentIndex = availableUnits.IndexOf(currentUnit);
-
-                            unitLine[i] = new Tuple<string,double>(availableUnits[currentIndex + 1].Type, availableUnits[currentIndex+1].Width);
-                            var addedLength = 3;
-                            usedLength += addedLength;
-
-                            foreach (var unitCheck in unitPriority)
-                            {
-                                var totalUnitLineLength = unitLine.Where(x => x.Item1 == unitCheck).Select(x => x.Item2).Sum();
-
-                                currentPercentage[unitCheck] = totalUnitLineLength / usedLength;
-                            }
-
-                            corridorLengthRemaining -= addedLength;
-                        }
-
-                        if (corridorLengthRemaining == 0)
-                        {
-                            break;
-                        }
-                    }
-
-                }
-
-                failInt += 1;
-
-                if (failInt > 100)
-                {
-                    throw new Exception("Solution not found.");
-                }
-            }
-
-
-
-
-
-
-
+            Assert.That(unitLine.Count(), Is.GreaterThan(0));
         }
+
+        
     }
 }
