@@ -7,3 +7,12 @@ C:\_play\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Randomiz
 C:\_play\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Randomizer.AssemblyInfo.cs
 C:\_play\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Kataclysm.Randomizer.dll
 C:\_play\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Kataclysm.Randomizer.pdb
+C:\dev\dbei-hackathon-na-2019\bin\Debug\netstandard2.0\Kataclysm.Randomizer.deps.json
+C:\dev\dbei-hackathon-na-2019\bin\Debug\netstandard2.0\Kataclysm.Randomizer.dll
+C:\dev\dbei-hackathon-na-2019\bin\Debug\netstandard2.0\Kataclysm.Randomizer.pdb
+C:\dev\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Randomizer.csprojAssemblyReference.cache
+C:\dev\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Randomizer.csproj.CoreCompileInputs.cache
+C:\dev\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Randomizer.AssemblyInfoInputs.cache
+C:\dev\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Randomizer.AssemblyInfo.cs
+C:\dev\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Kataclysm.Randomizer.dll
+C:\dev\dbei-hackathon-na-2019\src\Randomizer\obj\Debug\netstandard2.0\Kataclysm.Randomizer.pdb

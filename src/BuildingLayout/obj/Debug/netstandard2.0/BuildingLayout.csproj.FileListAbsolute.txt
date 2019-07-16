@@ -16,3 +16,6 @@ C:\dev\dbei-hackathon-na-2019\src\BuildingLayout\obj\Debug\netstandard2.0\Buildi
 C:\dev\dbei-hackathon-na-2019\src\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.AssemblyInfo.cs
 C:\dev\dbei-hackathon-na-2019\src\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.dll
 C:\dev\dbei-hackathon-na-2019\src\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.pdb
+C:\dev\dbei-hackathon-na-2019\src\BuildingLayout\bin\Debug\netstandard2.0\Kataclysm.Common.dll
+C:\dev\dbei-hackathon-na-2019\src\BuildingLayout\bin\Debug\netstandard2.0\Kataclysm.Common.pdb
+C:\dev\dbei-hackathon-na-2019\src\BuildingLayout\obj\Debug\netstandard2.0\BuildingLayout.csproj.CopyComplete

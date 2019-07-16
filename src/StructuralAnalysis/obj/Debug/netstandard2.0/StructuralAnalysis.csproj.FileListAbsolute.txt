@@ -8,3 +8,13 @@ C:\_play\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\
 C:\_play\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\StructuralAnalysis.csproj.CopyComplete
 C:\_play\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\Kataclysm.StructuralAnalysis.dll
 C:\_play\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\Kataclysm.StructuralAnalysis.pdb
+C:\dev\dbei-hackathon-na-2019\bin\Debug\netstandard2.0\Kataclysm.StructuralAnalysis.deps.json
+C:\dev\dbei-hackathon-na-2019\bin\Debug\netstandard2.0\Kataclysm.StructuralAnalysis.dll
+C:\dev\dbei-hackathon-na-2019\bin\Debug\netstandard2.0\Kataclysm.StructuralAnalysis.pdb
+C:\dev\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\StructuralAnalysis.csprojAssemblyReference.cache
+C:\dev\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\StructuralAnalysis.csproj.CoreCompileInputs.cache
+C:\dev\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\StructuralAnalysis.AssemblyInfoInputs.cache
+C:\dev\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\StructuralAnalysis.AssemblyInfo.cs
+C:\dev\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\StructuralAnalysis.csproj.CopyComplete
+C:\dev\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\Kataclysm.StructuralAnalysis.dll
+C:\dev\dbei-hackathon-na-2019\src\StructuralAnalysis\obj\Debug\netstandard2.0\Kataclysm.StructuralAnalysis.pdb

@@ -34,3 +34,5 @@ C:\dev\dbei-hackathon-na-2019\src\UnitDistributorTests\obj\Debug\netcoreapp2.1\U
 C:\dev\dbei-hackathon-na-2019\src\UnitDistributorTests\obj\Debug\netcoreapp2.1\UnitDistributorTests.csproj.CopyComplete
 C:\dev\dbei-hackathon-na-2019\src\UnitDistributorTests\obj\Debug\netcoreapp2.1\UnitDistributorTests.dll
 C:\dev\dbei-hackathon-na-2019\src\UnitDistributorTests\obj\Debug\netcoreapp2.1\UnitDistributorTests.pdb
+C:\dev\dbei-hackathon-na-2019\src\UnitDistributorTests\bin\Debug\netcoreapp2.1\Kataclysm.Common.dll
+C:\dev\dbei-hackathon-na-2019\src\UnitDistributorTests\bin\Debug\netcoreapp2.1\Kataclysm.Common.pdb

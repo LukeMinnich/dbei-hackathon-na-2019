@@ -70,6 +70,7 @@ namespace Tests
 
             var unitLine = FittingAlgorithm.CreateUnitLine(unitList, desiredUnitMix, corridorLength, ref currentPercentage, unitPriority, ref totalUnitList, ref usedLength);
 
+            Assert.That(unitLine.Count(), Is.GreaterThan(0));
         }
 
         
