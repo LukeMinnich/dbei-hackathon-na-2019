@@ -179,23 +179,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luke.minnich\\.nuget\\packages": {},
+    "C:\\Users\\Anthonie.Kramer\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_play\\dbei-hackathon-na-2019\\src\\Randomizer\\Randomizer.csproj",
+      "projectUniqueName": "C:\\dev\\dbei-hackathon-na-2019\\src\\Randomizer\\Randomizer.csproj",
       "projectName": "Kataclysm.Randomizer",
-      "projectPath": "C:\\_play\\dbei-hackathon-na-2019\\src\\Randomizer\\Randomizer.csproj",
-      "packagesPath": "C:\\Users\\luke.minnich\\.nuget\\packages",
-      "outputPath": "C:\\_play\\dbei-hackathon-na-2019\\src\\Randomizer\\obj\\",
+      "projectPath": "C:\\dev\\dbei-hackathon-na-2019\\src\\Randomizer\\Randomizer.csproj",
+      "packagesPath": "C:\\Users\\Anthonie.Kramer\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\dbei-hackathon-na-2019\\src\\Randomizer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\luke.minnich\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Anthonie.Kramer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

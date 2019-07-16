@@ -75,7 +75,7 @@
   },
   "libraries": {
     "MathNet.Numerics/4.8.1": {
-      "sha512": "mOw8VectzVoQOvx1J/JikQXKzzqs41lfwgGh/dxi8nSFVT3/h8LzxDuJJTPGXsxjZBkySFHYmaaZRrPDosutPg==",
+      "sha512": "HK97Btmlx8WLioRpWpyO3kCpvm3y9n4WzgFDQxaxUP9zbScOxB6JevGyGydcDtVDDPC4Gtv4u/j7pQjK6N+sUA==",
       "type": "package",
       "path": "mathnet.numerics/4.8.1",
       "files": [
@@ -94,7 +94,7 @@
       ]
     },
     "MathNet.Spatial/0.5.0": {
-      "sha512": "KItSuNwx06XrXMTgbLeULeDmjaZQcaCCeaiyIil4uXtVbnqZ7HQY2r7jiwVBrqUh2w5vMVkDdSJpjko7v9IY4g==",
+      "sha512": "xePEQ55S91mmdnzjGMS9eSG5QuUafN4rGm4Kyc/f2GYFu3fPojNDQqdBZ9DZNB3+8aUvw4SIimh3c64dY11MOw==",
       "type": "package",
       "path": "mathnet.spatial/0.5.0",
       "files": [
@@ -252,7 +252,7 @@
       ]
     },
     "Newtonsoft.Json/12.0.2": {
-      "sha512": "mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
       "path": "newtonsoft.json/12.0.2",
       "files": [
@@ -297,23 +297,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luke.minnich\\.nuget\\packages": {},
+    "C:\\Users\\Anthonie.Kramer\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_play\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\StructuralAnalysis.csproj",
+      "projectUniqueName": "C:\\dev\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\StructuralAnalysis.csproj",
       "projectName": "Kataclysm.StructuralAnalysis",
-      "projectPath": "C:\\_play\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\StructuralAnalysis.csproj",
-      "packagesPath": "C:\\Users\\luke.minnich\\.nuget\\packages",
-      "outputPath": "C:\\_play\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\obj\\",
+      "projectPath": "C:\\dev\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\StructuralAnalysis.csproj",
+      "packagesPath": "C:\\Users\\Anthonie.Kramer\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\dbei-hackathon-na-2019\\src\\StructuralAnalysis\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\luke.minnich\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Anthonie.Kramer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -326,8 +326,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\_play\\dbei-hackathon-na-2019\\src\\Common\\Common.csproj": {
-              "projectPath": "C:\\_play\\dbei-hackathon-na-2019\\src\\Common\\Common.csproj"
+            "C:\\dev\\dbei-hackathon-na-2019\\src\\Common\\Common.csproj": {
+              "projectPath": "C:\\dev\\dbei-hackathon-na-2019\\src\\Common\\Common.csproj"
             }
           }
         }
