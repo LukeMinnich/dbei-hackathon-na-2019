@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using BuildingLayout;
 using Kataclysm.Common;
 using Kataclysm.Common.Units.Conversion;
 using Kataclysm.StructuralAnalysis.Model;
@@ -94,18 +95,7 @@ namespace Kataclysm.StructuralAnalysis.Tests
                         ImportanceFactor = 1.0,
                         SeismicBaseLevel = new BuildingLevel("Level 01", 0)
                     },
-                    SiteParameters = new SiteParameters
-                    {
-                        Ss = 1.5,
-                        S1 = 0.638,
-                        SMS = 1.5,
-                        SM1 = 0.957,
-                        SDS = 1.0,
-                        SD1 = 0.638,
-                        Fa = 1.0,
-                        Fv = 1.5,
-                        TL = 12
-                    },
+                    Seismicity = Seismicity.High,
                     SystemParameters = new SystemParameters
                     {
                         Cd = 4,

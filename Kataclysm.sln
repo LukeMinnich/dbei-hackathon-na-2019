@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitDistributorTests", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerativeBuilding", "src\GenerativeBuilding\GenerativeBuilding.csproj", "{E0C9D596-78F8-4E57-927E-F5E17D927D20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaboom", "src\Kaboom\Kaboom.csproj", "{FBA27BE6-2EDE-4FDC-AD8D-954D4D3659EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{E0C9D596-78F8-4E57-927E-F5E17D927D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0C9D596-78F8-4E57-927E-F5E17D927D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0C9D596-78F8-4E57-927E-F5E17D927D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA27BE6-2EDE-4FDC-AD8D-954D4D3659EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA27BE6-2EDE-4FDC-AD8D-954D4D3659EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA27BE6-2EDE-4FDC-AD8D-954D4D3659EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA27BE6-2EDE-4FDC-AD8D-954D4D3659EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
