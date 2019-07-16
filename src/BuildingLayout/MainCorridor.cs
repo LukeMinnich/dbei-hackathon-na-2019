@@ -11,10 +11,15 @@ namespace BuildingLayout
         public Corridor MiddleLeg { get; set; }
         public Corridor RightLeg { get; set; }
 
+        public MainCorridor()
+        {
+
+        }
+
         public void CalculateMainLines()
         {
             var lineVector = new Vector2D();
-            var moveVector = new Vector2D(0, HallWidth);
+            var moveVector = new Vector2D(0, HallWidth/2);
 
             var lineLeft = CenterLine + moveVector;
             var lineRight = CenterLine - moveVector;

@@ -60,6 +60,7 @@ namespace GenerativeBuilding
             pManager.AddLineParameter("CorridorLines", "CorridorLines", "CorridorLines", GH_ParamAccess.list);
             pManager.AddTextParameter("UnitNames", "UnitNames", "UnitNames", GH_ParamAccess.list);
             pManager.AddLineParameter("ShearWallLines", "ShearWallLines", "ShearWallLines", GH_ParamAccess.list);
+            pManager.AddCurveParameter("Outline", "Outline", "Outline", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -87,6 +88,22 @@ namespace GenerativeBuilding
             DA.GetData(6, ref unitDepth);
             DA.GetData(7, ref hallWidth);
 
+            List<PolylineCurve> polyUnits;
+            List<string> unitNames;
+            List<Line> shearWallLines, lineList;
+            PolylineCurve boundary = new PolylineCurve();
+
+            GetBuildingLayout(defPath, mixPath, mainCorridor, leftLeg, middleLeg, rightLeg, unitDepth, hallWidth, out polyUnits, out unitNames, out shearWallLines, out lineList, out boundary);
+
+            DA.SetDataList(0, polyUnits);
+            DA.SetDataList(1, lineList);
+            DA.SetDataList(2, unitNames);
+            DA.SetDataList(3, shearWallLines);
+            DA.SetData(4, boundary);
+        }
+
+        private static void GetBuildingLayout(string defPath, string mixPath, Line mainCorridor, Line leftLeg, Line middleLeg, Line rightLeg, double unitDepth, double hallWidth, out List<PolylineCurve> polyUnits, out List<string> unitNames, out List<Line> shearWallLines, out List<Line> lineList, out PolylineCurve boundary)
+        {
             var unitList = new List<BuildingUnit>();
 
             var csv = File.ReadAllLines(defPath);
@@ -178,11 +195,9 @@ namespace GenerativeBuilding
 
             var totalUnitList = new List<Tuple<string, double>>();
 
-            var polyUnits = new List<PolylineCurve>();
-            var unitNames = new List<string>();
-
-            var shearWallLines = new List<Line>();
-
+            polyUnits = new List<PolylineCurve>();
+            unitNames = new List<string>();
+            shearWallLines = new List<Line>();
             foreach (var corridorLine in corridorLineList)
             {
                 var corridorLength = corridorLine.Line.Length;
@@ -235,30 +250,26 @@ namespace GenerativeBuilding
                 corridorLine.BuildingUnits = buildingUnits;
             }
 
-            var lineList = new List<Line>();
+            lineList = new List<Line>();
             foreach (var corridorLine in corridorLineList)
             {
                 lineList.Add(new Line(new Point3d(corridorLine.Line.StartPoint.X, corridorLine.Line.StartPoint.Y, 0), new Point3d(corridorLine.Line.EndPoint.X, corridorLine.Line.EndPoint.Y, 0)));
             }
 
+            var finalPoints = FittingAlgorithm.GetOutlinePoints(unitDepth, hallWidth, mainCorridorObject);
 
-            //foreach(var corridorLine in corridorLineList)
-            //{
-            //    foreach(var unit in corridorLine.BuildingUnits)
-            //    {
-            //        foreach(var shearWallLine in unit.GetShearWallLines())
-            //        {
-            //            shearWallLines.Add(new Line(new Point3d(shearWallLine.StartPoint.X, shearWallLine.StartPoint.Y, 0), new Point3d(shearWallLine.EndPoint.X, shearWallLine.EndPoint.Y, 0)));
-            //        }
+            var boundaryPointList = new List<Point3d>();
 
-            //    }
-            //}
+            foreach (var point in finalPoints)
+            {
+                boundaryPointList.Add(new Point3d(point.X, point.Y, 0));
+            }
 
-            DA.SetDataList(0, polyUnits);
-            DA.SetDataList(1, lineList);
-            DA.SetDataList(2, unitNames);
-            DA.SetDataList(3, shearWallLines);
+            var planBoundary = new PolylineCurve(boundaryPointList);
+
+            boundary = planBoundary;
         }
+
 
         private static Line2D CreateLine2D(Line leftLeg)
         {

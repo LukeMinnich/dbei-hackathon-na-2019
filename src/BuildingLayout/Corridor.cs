@@ -44,7 +44,7 @@ namespace BuildingLayout
             var lineLeft = new Line2D();
             var lineRight = new Line2D();
             var lineVector = CenterLine.Direction;
-            var moveVector = new Vector2D(HallWidth, 0);
+            var moveVector = new Vector2D(HallWidth/2, 0);
 
             switch (CorridorLocation)
             {
