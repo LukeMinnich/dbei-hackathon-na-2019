@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using Kataclysm.Common.Extensions;
 using MathNet.Spatial.Euclidean;
 using MathNet.Spatial.Units;
 using Newtonsoft.Json;
@@ -38,9 +39,6 @@ namespace Kataclysm.Common.Geometry
 
             CheckForMinimum3Vertices();
             CheckIfPolygonIsPlanar();
-
-            // Check for simple polygon valid only after planar polygon is confirmed
-            CheckForSimplePolygon();
         }
 
         #endregion
@@ -99,73 +97,12 @@ namespace Kataclysm.Common.Geometry
             return true;
         }
 
-        private void CheckForSimplePolygon()
-        {
-            if (!IsSimplePolygon())
-            {
-                throw new SimplePolygonException("Polygon must be simple. " +
-                                                 "No polygon edges can intersect");
-            }
-        }
-
-        private bool IsSimplePolygon()
-        {
-            return IsTriangularPolygon() ||
-                   IsSimplePolygonWithFourOrMoreSides();
-        }
-
         private bool IsTriangularPolygon()
         {
             return _vertices.Count == 3;
         }
 
-        private bool IsSimplePolygonWithFourOrMoreSides()
-        {
-            if (_vertices.Count < 4)
-            {
-                return false;
-            }
-
-            var transformedVertices = RotateToHorizontalPlane();
-
-            try
-            {
-                var flattenedPolygon = ProjectToHorizontalPlane(transformedVertices);
-                _area = flattenedPolygon.GetArea();
-                return true;
-            }
-            catch (SimplePolygonException)
-            {
-                return false;
-            }
-        }
-
-        public IReadOnlyList<Point3D> RotateToHorizontalPlane()
-        {
-            var vertices = new Point3DList(_vertices);
-
-            // Translation to cartesian origin
-            var transformedVertices =
-                vertices.Translate(new Vector3D(-1 * _vertices[0].X, -1 * _vertices[0].Y, -1 * _vertices[0].Z));
-
-            // Rotations about X
-            var rotX = -1 * GetInclinedRotationsForXAndY(transformedVertices).AboutXAxis;
-
-            transformedVertices = transformedVertices.RotateToAxis(rotX, UnitVector3D.XAxis);
-
-            // Rotations about Y using new rotations
-            var rotY = -1 * GetInclinedRotationsForXAndY(transformedVertices).AboutYAxis;
-
-            transformedVertices = transformedVertices.RotateToAxis(rotY, UnitVector3D.YAxis);
-
-            // Reverse translation to cartesian origin
-            transformedVertices =
-                transformedVertices.Translate(new Vector3D(_vertices[0].X, _vertices[0].Y, _vertices[0].Z));
-
-            return new ReadOnlyCollection<Point3D>(transformedVertices.ToList());
-        }
-
-        private static SimplePolygon2D ProjectToHorizontalPlane(IEnumerable<Point3D> vertices)
+        private static Polygon2D ProjectToHorizontalPlane(IEnumerable<Point3D> vertices)
         {
             var vertices2D = new LinkedList<Point2D>();
 
@@ -174,24 +111,12 @@ namespace Kataclysm.Common.Geometry
                 vertices2D.AddLast(new Point2D(vertex.X, vertex.Y));
             }
 
-            return new SimplePolygon2D(vertices2D);
+            return new Polygon2D(vertices2D);
         }
 
-        public SimplePolygon2D ProjectToHorizontalPlane()
+        public Polygon2D ProjectToHorizontalPlane()
         {
             return ProjectToHorizontalPlane(_vertices);
-        }
-
-        private static InclinedRotations GetInclinedRotationsForXAndY(Point3DList vertices)
-        {
-            var plane = Plane.FromPoints(vertices[0], vertices[1], vertices[2]);
-
-            return plane.GetInclinedRotations();
-        }
-
-        public InclinedRotations GetInclinedRotationsForXAndY()
-        {
-            return GetInclinedRotationsForXAndY(_vertices);
         }
 
         public IReadOnlyList<Point3D> Vertices()
@@ -202,25 +127,6 @@ namespace Kataclysm.Common.Geometry
         public double GetArea()
         {
             return _area;
-        }
-
-        public bool IsConvex()
-        {
-            if (_vertices.Count < 4)
-            {
-                return true;
-            }
-
-            var transformedVertices = RotateToHorizontalPlane();
-            var flattenedPolygon = ProjectToHorizontalPlane(transformedVertices);
-
-            return flattenedPolygon.IsConvex();
-        }
-
-        public bool IsProjectionClockwise()
-        {
-            var transformedVertices = RotateToHorizontalPlane();
-            return (ProjectToHorizontalPlane(transformedVertices).IsClockwise());
         }
 
         public Polygon3D Reverse()

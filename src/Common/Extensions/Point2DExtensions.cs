@@ -175,40 +175,6 @@ namespace Kataclysm.Common.Extensions
                 : allPoints.OrderBy(p => p.Y).ToList();
         }
 
-        public static IEnumerable<PreVertex> ConvertToPreVertices(this IEnumerable<Point2D> points)
-        {
-            var convertedPoints = new List<PreVertex>();
-
-            foreach (var point in points)
-            {
-                convertedPoints.Add(point.ConvertToPreVertex());
-            }
-
-            return convertedPoints;
-        }
-
-        public static PreVertex ConvertToPreVertex(this Point2D point)
-        {
-            return new PreVertex(point.X, point.Y);
-        }
-
-        public static IEnumerable<Point2D> ConvertFromPreVertices(IEnumerable<PreVertex> points)
-        {
-            var convertedPoints = new List<Point2D>();
-
-            foreach (var point in points)
-            {
-                convertedPoints.Add(ConvertFromPreVertex(point));
-            }
-
-            return convertedPoints;
-        }
-
-        public static Point2D ConvertFromPreVertex(PreVertex point)
-        {
-            return new Point2D(point.X, point.Y);
-        }
-
         public static LineSegment2D LongestSegment(this IEnumerable<Point2D> points)
         {
             var allPoints = points.ToList();

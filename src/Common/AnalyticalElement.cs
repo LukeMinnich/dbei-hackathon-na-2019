@@ -82,80 +82,6 @@ namespace Kataclysm.Common
 
         #endregion
 
-        protected internal List<IInternalLoad> GetLoadsFromReactionsFrom(IEnumerable<AnalyticalElement> elements)
-        {
-            var allLoadsFromReactions = new List<IInternalLoad>();
-
-            foreach (var analyticalElement in elements)
-            {
-                List<IInternalLoad> LoadsFromReactions = analyticalElement.GetLoadsFromReactions();
-
-                //First, loop through the point loads and determine the point load with the closest distance to the line
-                double ClosestDistance = 0;
-                int PointLoadCount = 0;
-                foreach (IInternalLoad load in LoadsFromReactions)
-                {
-                    if (PointLoadCount == 0)
-                    {
-                        if (load is InternalPointLoad3D)
-                        {
-                            ClosestDistance =
-                                GetDistanceFromPointToLine(EndI, EndJ, ((InternalPointLoad3D)load).Location);
-                            PointLoadCount += 1;
-                        }
-                    }
-                    else
-                    {
-                        if (load is InternalPointLoad3D)
-                        {
-                            ClosestDistance =
-                                Math.Min(GetDistanceFromPointToLine(EndI, EndJ, ((InternalPointLoad3D)load).Location),
-                                    ClosestDistance);
-                            PointLoadCount += 1;
-                        }
-                    }
-                }
-
-                foreach (IInternalLoad load in LoadsFromReactions)
-                {
-                    if (load is InternalPointLoad3D)
-                    {
-                        if (GetDistanceFromPointToLine2D(EndI, EndJ, ((InternalPointLoad3D)load).Location) <=
-                            FUZZDISTANCE)
-                        {
-                            //If the load is within the fuzz distance in the X-Y plane
-                            if (GetDistanceFromPointToLine(EndI, EndJ, ((InternalPointLoad3D)load).Location) <=
-                                ClosestDistance + FUZZDISTANCE)
-                            {
-                                //If the load in question is within the closest distance (in 3D) + fuzz distance, we can add it
-
-                                if (PointLiesWithinElementInXY(((InternalPointLoad3D)load).Location) == true)
-                                {
-                                    //If the point load location lies within the endpoints of the element (in the x-y plane), then
-                                    //add it to the loads list
-                                    allLoadsFromReactions.Add(load);
-                                }
-                                
-                            }
-                        }
-                    }
-                    else
-                    {
-                        //Distributed load
-
-                        InternalDistributedLoad3D DistrLoad =
-                            GetDistributedLoadFromReaction((InternalDistributedLoad3D)load);
-                        if (DistrLoad.StartLoad.IsZero() == false || DistrLoad.EndLoad.IsZero() == false)
-                        {
-                            allLoadsFromReactions.Add(DistrLoad);
-                        }
-                    }
-                }
-            }
-
-            return allLoadsFromReactions;
-        }
-
         protected bool PointLiesWithinElementInXY(Point3D point)
         {
             double lineMaxX = Math.Max(EndI.X, EndJ.X);
@@ -180,9 +106,6 @@ namespace Kataclysm.Common
 
             return false;
         }
-        protected internal abstract List<IInternalLoad> GetLoadsFromReactions();
-
-        protected internal abstract void Analyze();
 
         internal void RemoveAllInternalLoads()
         {
@@ -434,8 +357,6 @@ namespace Kataclysm.Common
         protected abstract double GetSelfWeightLineLoadMagnitude();
 
         public abstract List<FloorLoad> GetSelfWeightLoadsForSeismicMass();
-
-        public abstract void ReduceLiveLoads(IEnumerable<AnalyticalElement> supportedElements);
 
         public void AddExternalLoad(Load3D load)
         {

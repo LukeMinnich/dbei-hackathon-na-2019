@@ -74,11 +74,6 @@ namespace Kataclysm.StructuralAnalysis.Rigid
             return loads;
         }
 
-        public override void ReduceLiveLoads(IEnumerable<AnalyticalElement> supportedElements)
-        {
-            ReduceLiveLoads(supportedElements, Log);
-        }
-
         public string UniqueId => BearingWall.UniqueId;
 
         public string PierID => BearingWall.PierID;
