@@ -1,7 +1,10 @@
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using BuildingLayout;
 using Kataclysm.Common;
 using Kataclysm.Common.Units.Conversion;
+using Kataclysm.Randomizer;
 using Kataclysm.StructuralAnalysis.Model;
 using Kataclysm.StructuralAnalysis.Rigid;
 using Katerra.Apollo.Structures.Common.Units;
@@ -104,16 +107,22 @@ namespace Kataclysm.StructuralAnalysis.Tests
                         Ct = 0.02,
                         X = 0.75
                     }
-                }
+                },
+                RandomizedBuilding = Randomize.Random()
             };
             
             var manager = new AnalysisManager(serializedModel);
             
-            manager.Run();
+            var wallCosts = manager.Run();
 
             var table = RigidAnalysisTabularReport.GenerateShearWallForceStiffnessTable(manager.RigidAnalyses[level]);
 
             var output = table.PrintToMarkdown();
+            
+            string executingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string fpath = Path.Combine(executingPath, @"DataOutput\testData.csv");
+
+            wallCosts.WriteToCSV(fpath);
         }
     }
 }
