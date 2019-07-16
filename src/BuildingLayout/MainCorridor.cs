@@ -19,8 +19,8 @@ namespace BuildingLayout
             var lineLeft = CenterLine + moveVector;
             var lineRight = CenterLine - moveVector;
 
-            LineLeft = new List<Line2D>();
-            LineRight = lineRight;
+            LineLeft = new List<UnitsLine>();
+            LineRight = new UnitsLine(lineRight);
 
             var corridorWidth = (UnitDepth * 2 + HallWidth);
 
@@ -42,12 +42,12 @@ namespace BuildingLayout
                         lineVector = CenterLine.Direction / CenterLine.Length;
                         var lineLeft1 = new Line2D(lineLeft.StartPoint, MiddleLeg.CenterLine.StartPoint - lineVector * corridorWidth / 2);
                         var lineLeft2 = new Line2D(MiddleLeg.CenterLine.StartPoint, lineLeft.StartPoint - lineVector * corridorWidth / 2);
-                        LineLeft.Add(lineLeft1);
-                        LineLeft.Add(lineLeft2);
+                        LineLeft.Add(new UnitsLine(lineLeft1));
+                        LineLeft.Add(new UnitsLine(lineLeft2));
                     }
                     else if(MiddleLeg == null)
                     {
-                        LineLeft.Add(lineLeft);
+                        LineLeft.Add(new UnitsLine(lineLeft));
                     }
 
                     break;

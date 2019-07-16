@@ -12,6 +12,9 @@ namespace BuildingLayout
         public double Depth { get; set; }
         public double DoorCenterLocation { get; set; }
         public double DoorWidth { get; set; }
+        public Point2D Location { get; set; }
+        public double Rotation { get; set; }
+    
 
         public PolyLine2D GetPolyline()
         {

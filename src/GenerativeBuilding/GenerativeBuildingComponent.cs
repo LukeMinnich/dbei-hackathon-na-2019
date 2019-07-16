@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using BuildingLayout;
 using Grasshopper.Kernel;
+using MathNet.Spatial.Euclidean;
 using Rhino.Geometry;
 
 // In order to load the result of this wizard, you will also need to
@@ -102,18 +104,101 @@ namespace GenerativeBuilding
                 var lineSplit = csv[i].Split(',');
 
                 desiredUnitMix.Add(lineSplit[0], Convert.ToDouble(lineSplit[1]));
-            }
+            }            
+
+            var corridors = new List<Corridor>();
 
             var mainCorridorObject = new MainCorridor();
 
-            var leftStart = new Point2D
-            var leftLegObject = new Corridor(new Line2D())
+            var leftLine2D = CreateLine2D(leftLeg);
+            var location = CorridorLocation.LeftLeg;
+            var leftLegObject = new Corridor(leftLine2D, unitDepth, hallWidth, location);
+
+            var midLine2D = CreateLine2D(middleLeg);
+            location = CorridorLocation.MiddleLeg;
+            var midLegObject = new Corridor(midLine2D, unitDepth, hallWidth, location);
+            
+            var rightLine2D = CreateLine2D(middleLeg);
+            location = CorridorLocation.MiddleLeg;
+            var rightLegObject = new Corridor(rightLine2D, unitDepth, hallWidth, location);
+
+            var mainLine2D = CreateLine2D(mainCorridor);
+            location = CorridorLocation.Main;
+            mainCorridorObject.CenterLine = mainLine2D;
+            mainCorridorObject.UnitDepth = unitDepth;
+            mainCorridorObject.HallWidth = hallWidth;
+            mainCorridorObject.CorridorLocation = location;
+
+            mainCorridorObject.LeftLeg = leftLegObject;
+            mainCorridorObject.MiddleLeg = midLegObject;
+            mainCorridorObject.RightLeg = rightLegObject;
+
+            var corridorLineList = new List<UnitsLine>();
+
+            var currentPercentage = new BuildingUnitMix();
+            foreach(var kvp in desiredUnitMix)
+            {
+                currentPercentage.Add(kvp.Key, 0);
+            }
+
+            corridorLineList.AddRange(leftLegObject.GetLines());
+            corridorLineList.AddRange(midLegObject.GetLines());
+            corridorLineList.AddRange(rightLegObject.GetLines());
+            corridorLineList.AddRange(mainCorridorObject.GetLines());
+
+            corridorLineList.OrderBy(x => x.Line.Length);
+            double usedLength = 0;
+
+            var unitPriority = new List<string>()
+            {
+                "C",
+                "B",
+                "A",
+                "S"
+            };
+
+            var totalUnitList = new List<Tuple<string, double>>();
+
+            var polyUnits = new List<PolylineCurve>();
+
+            foreach (var corridorLine in corridorLineList)
+            {
+                var corridorLength = corridorLine.Line.Length;
+                var units = FittingAlgorithm.CreateUnitLine(unitList, desiredUnitMix, corridorLength, ref currentPercentage, unitPriority, ref totalUnitList, ref usedLength);
+
+                var buildingUnits = new List<BuildingUnit>();
+
+                var startLength = 0;
+                var lineVector = corridorLine.Line.Direction / corridorLine.Line.Length;
+
+                var angle = new Vector2D(1, 0).AngleTo(lineVector);   
+
+                foreach(var unit in units)
+                {
+                    var matchingUnit = unitList.Single(x => (x.Type == unit.Item1 && x.Width == unit.Item2));
+                    
+                    buildingUnits.Add(matchingUnit);
+                }
+
+                corridorLine.BuildingUnits = buildingUnits;            
+                
+            }
 
             
 
-            var units = FittingAlgorithm.CreateUnitLine(unitList, desiredUnitMix,);
 
 
+        }
+
+        private static Line2D CreateLine2D(Line leftLeg)
+        {
+            var startPoint = leftLeg.ToNurbsCurve().PointAtStart;
+            var leftStart = new Point2D(startPoint.X, startPoint.Y);
+            var endPoint = leftLeg.ToNurbsCurve().PointAtEnd;
+            var leftEnd = new Point2D(endPoint.X, endPoint.Y);
+            var leftLine2D = new Line2D(leftStart, leftEnd);
+
+            return leftLine2D;
         }
 
         /// <summary>

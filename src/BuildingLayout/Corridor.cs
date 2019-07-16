@@ -11,13 +11,14 @@ namespace BuildingLayout
         public double UnitDepth { get; set; }
         public double HallWidth { get; set; }
         public CorridorLocation CorridorLocation { get; set; }
-        public List<Line2D> LineLeft { get; set; }
-        public Line2D LineRight { get; set; }
+        public List<UnitsLine> LineLeft { get; set; }
+        public UnitsLine LineRight { get; set; }
 
         public Corridor()
         {
 
         }
+
 
         public Corridor(Line2D line, double unitDepth, double hallWidth, CorridorLocation location)
         {
@@ -25,6 +26,17 @@ namespace BuildingLayout
             UnitDepth = UnitDepth;
             HallWidth = hallWidth;
             CorridorLocation = location;
+
+            CalculateLegLines();
+        }
+
+        public List<UnitsLine> GetLines()
+        {
+            List<UnitsLine> lineList = new List<UnitsLine>();
+            lineList.AddRange(LineLeft);
+            lineList.Add(LineRight);
+
+            return lineList;
         }
 
         public void CalculateLegLines()
@@ -56,8 +68,8 @@ namespace BuildingLayout
                     break;
             }
 
-            LineLeft = new List<Line2D>() { lineLeft };
-            LineRight = lineRight;
+            LineLeft = new List<UnitsLine>() { new UnitsLine(lineLeft) };
+            LineRight = new UnitsLine(lineRight);
 
         }
 
